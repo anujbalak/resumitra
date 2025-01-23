@@ -60,3 +60,7 @@ button>a {
 button:hover, button:focus {
     --button-text: 17, 17, 17;
 }
+
+.clicked {
+    opacity: 60%;
+}
