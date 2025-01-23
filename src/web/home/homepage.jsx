@@ -7,7 +7,7 @@ export default function Homepage() {
             <Title title={'Resumitra'}/>
             <Tagline />
             <div className="buttons">
-                <Button name={'Get started'} url={'#'} target={'_self'}/>
+                <Button name={'Get started'} url={'src/web/dashboard/dashboard.html'} target={'_self'}/>
                 <Button name={'View on Github'} url={'https://github.com/anujbalak/resumitra'} target={'_blank'}/>
             </div>
         </div>
