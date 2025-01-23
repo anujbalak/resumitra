@@ -9,7 +9,7 @@ export default function Button({name, url, target}) {
 function ButtonContent({name, url, target}) {
     if(url) {
         return (
-            <button className="button">
+            <button className="button" onClick={(e) => e.target.classList.toggle('clicked')}>
                 <a href={url} target={target} tabIndex={-5}>{name}</a>
             </button>
         )
