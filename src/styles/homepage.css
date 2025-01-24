@@ -6,9 +6,11 @@
     --button-text: 238, 238, 238;
 }
 
-div#root {
+div.homepage-container {
+    min-width: 100%;
     display: grid;
     justify-content: center;
+    align-content: center;
     background-color: rgb(var(--pure-black));
     background-image: radial-gradient(
         rgba(234, 234, 234, 0.5) 0.6px,
