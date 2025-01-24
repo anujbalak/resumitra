@@ -1,13 +1,13 @@
 import Button from "../../components/Button"
 
+export default function Homepage({btnEventHandler}) {
 
-export default function Homepage() {
     return (
         <div className="homepage">
             <Title title={'Resumitra'}/>
             <Tagline />
             <div className="buttons">
-                <Button name={'Get started'} url={'src/web/dashboard/dashboard.html'} target={'_self'}/>
+                <Button name={'Get started'} url={'#'} target={'_self'} btnEventHandler={btnEventHandler}/>
                 <Button name={'View on Github'} url={'https://github.com/anujbalak/resumitra'} target={'_blank'}/>
             </div>
         </div>
