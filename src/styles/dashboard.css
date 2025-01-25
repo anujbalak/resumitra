@@ -38,5 +38,135 @@ div.resumes {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    gap: 2em;
+    flex-wrap: wrap;
+    margin: 3em 1em;
+}
+
+div.resume-container {
+    max-width: 300px;
+    display: grid;
+    grid-template-rows: 400px min-content;
+    border: 2px solid rgb(var(--white-color));
+    border-radius: 10px;
+}
+
+div.resume-preview-small {
+    width: 300px;
+}
+
+div.resume-properties {
+    display: grid;
+    grid-template-columns: 1fr 3em;
+    align-items: center;
+    border-top:2px solid rgb(var(--white-color));
+}
+
+div.resume-properties h2.resume-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+div.three-dot-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-left: 2px solid rgb(var(--white-color));
+}
+
+div.three-dot-container button {
+    border: none;
+}
+
+div.three-dot-container button:focus, 
+div.three-dot-container button:hover {
+    background-color: transparent;
+    color: rgb(var(--white-color));
+}
+
+dialog.dialog {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    background-color: rgb(var(--black-color));
+    border: 2px solid rgb(var(--white-color));
+    border-radius: 10px;
+}
+
+label.new-resume-label input {
+    font-size: 1.2rem;
+    background-color: black;
+    width: 90%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 2px solid rgb(var(--white-color));
+}
+
+label.new-resume-label p {
+    align-self: left;
+    font-size: 1.1rem;
+}
+dialog.dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog.dialog form>p {
+    font-style: italic;
+    margin: 0;
+}
+
+dialog.dialog form>div.button-container {
+    margin-top: 1em;
+}
+
+div.resume-options {
+    padding: 0.8em 0.8em;
+    background-color: rgb(33, 33, 33);
+    border-radius: 0.4em;
+    position: absolute;
+    transform: translate(312%, 370%);
+    animation: fade ease-in-out 0.25s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+div.resume-options p {
+    margin: 0;
+}
+
+div.resume-options button + button{
+    margin-top: 1em;
+}
+
+button.edit-resume-btn, button.delete-resume-btn {
+    cursor: pointer;
+    display: flex;
+    gap: 0.4em;
+    justify-content: center;
+    max-height: 2.5em;
+    border: none;
+    padding: 0;
+}
+
+button.edit-resume-btn:hover, button.edit-resume-btn:focus {
+    background-color: transparent;
+    color: rgb(var(--white-color));
+    border: none;
+    border-radius: 0;
+}
+
+button.delete-resume-btn, button.delete-resume-btn:hover, button.delete-resume-btn:focus {
+    background-color: transparent;
+    color: rgb(255, 65, 65);
+    border: none;
+    border-radius: 0;
 }
