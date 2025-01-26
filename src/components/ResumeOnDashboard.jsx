@@ -5,6 +5,7 @@ export default function RenderResume({
         name,
         id,
         deleteResumeHandler,
+        onEditResume,
     }) {
     const [showOptions, setShowOptions] = useState(false);
 
@@ -23,7 +24,12 @@ export default function RenderResume({
 
     return (
     <div className="resume-container">
-        <div className="resume-preview-small"></div>
+        <div 
+            className="resume-preview-small" 
+            onClick={onEditResume} 
+            data-title= {name} 
+            id={id}
+        ></div>
         <div className="resume-properties">
             <h2 className="resume-name">{name}</h2>
             <div className="three-dot-container">
@@ -34,15 +40,27 @@ export default function RenderResume({
         && <ResumeOptions 
             deleteResumeHandler={deleteResumeHandler}
             id={id}
+            onEditResume={onEditResume}
+            value= {name} 
         />}
     </div>
 )
 }
 
-function ResumeOptions({deleteResumeHandler, id}) {
+function ResumeOptions({
+        deleteResumeHandler, 
+        id,
+        onEditResume,
+        value
+    }) {
     return (
         <div className="resume-options" onClick={(e) => e.stopPropagation()}>
-            <button className="edit-resume-btn" id={id}>
+            <button 
+                className="edit-resume-btn" 
+                id={id} 
+                onClick={onEditResume}
+                data-title={value}
+            >
                 Edit
             </button>
             <button 
