@@ -53,6 +53,7 @@ div.resume-container {
 
 div.resume-preview-small {
     width: 300px;
+    cursor: pointer;
 }
 
 div.resume-properties {
