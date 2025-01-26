@@ -2,20 +2,30 @@ import { useState } from "react"
 import './App.css'
 import "./styles/homepage.css"
 import "./styles/dashboard.css"
+import "./styles/editor.css"
 import Homepage from './web/home/homepage.jsx'
 import Dashboard from "./web/dashboard/Dashboard.jsx";
+import EditPage from "./components/EditPage.jsx"
 
+let currentResumeDetails = {}
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  function btnEventHandler() {
+  function goDashboardBtnHandler() {
     setCurrentPage('dashboard')
   }
 
+  function editResumeBtnHandler(e) {
+    setCurrentPage('edit-resume')
+    currentResumeDetails = {id:e.target.id, title:e.target.dataset.title}
+  }
+
+
   return (
     <>
-      {currentPage === 'home' && <RenderHome btnEventHandler={btnEventHandler} />}
-      {currentPage === 'dashboard' && <RenderDashboard />}
+      {currentPage === 'home' && <RenderHome btnEventHandler={goDashboardBtnHandler} />}
+      {currentPage === 'dashboard' && <RenderDashboard onEditResume={editResumeBtnHandler}/>}
+      {currentPage === 'edit-resume' && <RenderEditResumePage backBtnHandler={goDashboardBtnHandler} />}
       {/* <RenderDashboard currentPage={currentPage} /> */}
     </>
   )
@@ -29,10 +39,18 @@ function RenderHome({btnEventHandler}) {
   )
 }
 
-function RenderDashboard() {
+function RenderDashboard({onEditResume}) {
   return (
     <div className="dashboard-page">
-      <Dashboard />
+      <Dashboard onEditResume={onEditResume}/>
     </div>
   );
+}
+
+function RenderEditResumePage({backBtnHandler}) {
+  return (
+    <div className="edit-resume-page" key={currentResumeDetails.id}>
+      <EditPage backBtnHandler={backBtnHandler} resumeDetails={currentResumeDetails}/>
+    </div>
+  )
 }
