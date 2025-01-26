@@ -1,4 +1,4 @@
-export class Resume {
+export default class Resume {
     constructor() {
         this.name = null;
         this.id = null;
