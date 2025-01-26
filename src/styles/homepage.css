@@ -52,14 +52,14 @@ div.buttons>div.button-container {
     margin-right: 1em;
 }
 
-button>a {
+button.button>a {
     font-size: 1.3rem;
     color: rgb(var(--button-text));
     transition: color 0.25s ease-in-out;
 }
 
 
-button:hover, button:focus {
+button.button:hover, button.button:focus {
     --button-text: 17, 17, 17;
 }
 
