@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import RenderResume from "../../components/ResumeOnDashboard";
 
 let localResumes = []
-export default function Dashboard() {
+export default function Dashboard({onEditResume}) {
     const [newResume, setNewResume] = useState(false);
     const [resumeList, setResumeList] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +34,7 @@ export default function Dashboard() {
                 setResumeList={setResumeList}
                 deletedResumeId={deletedResumeId}
                 setDeletedResumeId={setDeletedResumeId}
+                onEditResume={onEditResume}
             />
         </>
     )
@@ -47,6 +48,7 @@ function Resumes(
         setResumeList,
         deletedResumeId,
         setDeletedResumeId,
+        onEditResume,
     }) {
 
     function newResumeSubmit(e) {
@@ -78,7 +80,11 @@ function Resumes(
                 newResume={newResume} 
                 newResumeSubmit={newResumeSubmit}
             />
-            <RenderResumes resumeList={resumeList} setDeletedResumeId={setDeletedResumeId} deleteResumeHandler={deleteResumeHandler}/>
+            <RenderResumes 
+                resumeList={resumeList} 
+                deleteResumeHandler={deleteResumeHandler}
+                onEditResume={onEditResume}
+            />
             <Button 
                 name={'New Resume'} 
                 btnEventHandler={btnEventHandler}
@@ -114,15 +120,19 @@ function saveInLocalStorage(resumeList) {
 
 function RenderResumes({
         resumeList,
-        deleteResumeHandler
+        deleteResumeHandler,
+        onEditResume
     }) {
     return (
-        resumeList.map((resume) => <RenderResume 
-            name={resume.name} 
-            key={resume.id}
-            id={resume.id}
-            deleteResumeHandler={deleteResumeHandler}
-        />)
+        resumeList.map((resume) => 
+            <RenderResume 
+                name={resume.name} 
+                key={resume.id}
+                id={resume.id}
+                deleteResumeHandler={deleteResumeHandler}
+                onEditResume={onEditResume}
+            />
+        )
     )
 }
 
