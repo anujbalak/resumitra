@@ -12,7 +12,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
 
     let resume = new Resume();
     if (isLoaded === false) {
-        let savedResume = JSON.parse(localStorage.getItem(resumeDetails.id));
+        const savedResume = JSON.parse(localStorage.getItem(resumeDetails.id));
         if (savedResume !== null) {
             resume = savedResume;
             setResumeData(savedResume)
@@ -25,14 +25,16 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
         }
         setIsLoaded(true);
     }
-    console.log(resume);
-   
+
     return (
         <>
         <Header title={resumeDetails.title}/>
         <LeftSidebar backBtnHandler={backBtnHandler}/>
-        <EnterDetails />
-        <ResumeScreen />
+        <EnterDetails 
+            resumeData={resumeData} 
+            setResumeData={setResumeData}
+        />
+        <ResumeScreen resumeData={resumeData}/>
         <RightSidebar />
         </>
     )
