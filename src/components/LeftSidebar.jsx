@@ -1,4 +1,4 @@
-import ButtonWithIcon from "./ButtonWIthIcon";
+import ButtonWithIcon from "./ButtonWithIcon";
 import testImg from "/test.png"
 
 export default function LeftSidebar({backBtnHandler}) {
@@ -7,6 +7,10 @@ export default function LeftSidebar({backBtnHandler}) {
             <ButtonWithIcon 
                 imgSource={testImg}
                 btnHandler={backBtnHandler}
+            />
+            <ButtonWithIcon 
+                link='#personal-details'
+                imgSource={testImg}
             />
         </div>
     )
