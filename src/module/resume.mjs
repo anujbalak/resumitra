@@ -14,7 +14,17 @@ class Personal {
         this.name = null
         this.email = null
         this.mobile = null;
+        this.website = null;
         this.profile = null;
+        this.github = null;
+        this.linkedin = null;
+    }
+}
+
+export class Social {
+    constructor() {
+        this.name = null;
+        this.link = null;
     }
 }
 
