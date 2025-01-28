@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from "react";
+import threeDotsIcon from "/svg/three-dots.svg";
 
 export default function RenderResume({
         name,
@@ -33,7 +34,9 @@ export default function RenderResume({
         <div className="resume-properties">
             <h2 className="resume-name">{name}</h2>
             <div className="three-dot-container">
-                <button onClick={handleBtnClick}>┇</button>
+                <button onClick={handleBtnClick}>
+                    <img className="three-dots icon" src={threeDotsIcon} alt="" />
+                </button>
             </div>
         </div>
         {showOptions === true 

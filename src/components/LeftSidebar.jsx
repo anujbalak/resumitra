@@ -1,16 +1,17 @@
 import ButtonWithIcon from "./ButtonWithIcon";
-import testImg from "/test.png"
+import homeIcon from "/svg/home-angle.svg"
+import personalIcon from "/svg/personal.svg"
 
 export default function LeftSidebar({backBtnHandler}) {
     return (
         <div className="left-sidebar">
             <ButtonWithIcon 
-                imgSource={testImg}
+                imgSource={homeIcon}
                 btnHandler={backBtnHandler}
             />
             <ButtonWithIcon 
                 link='#personal-details'
-                imgSource={testImg}
+                imgSource={personalIcon}
             />
         </div>
     )
