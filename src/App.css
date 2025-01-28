@@ -23,3 +23,15 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+img.icon {
+  max-width: 24px;
+}
+
+.three-dots.icon {
+  opacity: 70%;
+}
+
+.three-dot-container button {
+  background-color: transparent;
+}
