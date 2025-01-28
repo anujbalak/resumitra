@@ -128,7 +128,7 @@ div.resume-options {
     background-color: rgb(33, 33, 33);
     border-radius: 0.4em;
     position: absolute;
-    transform: translate(312%, 370%);
+    transform: translate(300%, 375%);
     animation: fade ease-in-out 0.25s;
 }
 
@@ -140,8 +140,11 @@ div.resume-options {
         opacity: 100%;
     }
 }
-div.resume-options p {
+
+div.resume-options button {
+    font-family: "dm sans";
     margin: 0;
+    font-size: 1rem;
 }
 
 div.resume-options button + button{
