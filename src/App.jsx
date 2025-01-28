@@ -3,6 +3,7 @@ import './App.css'
 import "./styles/homepage.css"
 import "./styles/dashboard.css"
 import "./styles/editor.css"
+import "./styles/resume.css"
 import Homepage from './web/home/homepage.jsx'
 import Dashboard from "./web/dashboard/Dashboard.jsx";
 import EditPage from "./components/EditPage.jsx"
@@ -25,7 +26,7 @@ export default function App() {
     <>
       {currentPage === 'home' && <RenderHome btnEventHandler={goDashboardBtnHandler} />}
       {currentPage === 'dashboard' && <RenderDashboard onEditResume={editResumeBtnHandler}/>}
-      {currentPage === 'edit-resume' && <RenderEditResumePage backBtnHandler={goDashboardBtnHandler} />}
+      {currentPage === 'edit-resume' && <RenderEditResumePage backBtnHandler={goDashboardBtnHandler} resumeDetails={currentResumeDetails}/>}
       {/* <RenderDashboard currentPage={currentPage} /> */}
     </>
   )
@@ -47,10 +48,10 @@ function RenderDashboard({onEditResume}) {
   );
 }
 
-function RenderEditResumePage({backBtnHandler}) {
+function RenderEditResumePage({backBtnHandler, resumeDetails}) {
   return (
     <div className="edit-resume-page" key={currentResumeDetails.id}>
-      <EditPage backBtnHandler={backBtnHandler} resumeDetails={currentResumeDetails}/>
+      <EditPage backBtnHandler={backBtnHandler} resumeDetails={resumeDetails}/>
     </div>
   )
 }
