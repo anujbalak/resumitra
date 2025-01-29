@@ -1,0 +1,33 @@
+/* -------------------general------------------ */
+div.input-container {
+    width: 90%;
+    max-width: 500px;
+}
+label.input-label {
+    display: grid;
+    width: 90%;
+    gap: 0.3em;
+}
+span.input-text {
+    justify-self: start;
+    font-size: 1.05rem;
+}
+
+input.input {
+    outline: none;
+    width: 100%;
+    justify-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    font-size: 1.05rem;
+    border: solid 1px rgb(var(--border-color));
+    background-color: rgb(13, 13, 13);
+    border-radius: 0.2em;
+    color: rgb(--white-color);
+    opacity: 70%;
+}
+
+div.input-container.github, div.input-container.linkedin {
+    max-width: 12em;
+}

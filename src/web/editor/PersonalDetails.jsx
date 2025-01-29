@@ -104,6 +104,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 label='Name'
                 inputHandler={nameHandler}
                 value={savedResume.personalDetails.name}
+                className='name'
             />
             <Input
                 label='Email'
@@ -111,6 +112,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 inputHandler={emailHandler}
                 value={savedResume.personalDetails.email}
                 placeHolder={'user@email.com'}
+                className='email'
             />
             <Input
                 label="Phone"
@@ -118,6 +120,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 inputHandler={phoneHandler}
                 value={savedResume.personalDetails.mobile}
                 placeHolder={'+00 12345 09876'}
+                className='phone'
             />
             <Input 
                 type='url'
@@ -125,6 +128,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 inputHandler={websiteHandler}
                 value={savedResume.personalDetails.website}
                 placeHolder={'www.example.com'}
+                className='website'
             />
             <Input 
                 type='url'
@@ -132,6 +136,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 inputHandler={githubHandler}
                 value={savedResume.personalDetails.github}
                 placeHolder={'www.github.com/username'}
+                className='github'
             />
             <Input
                 type='url'
@@ -139,11 +144,13 @@ function PersonalDetails({resumeData, setResumeData}) {
                 inputHandler={linkedinHandler}
                 value={savedResume.personalDetails.linkedin}
                 placeHolder='www.linkedin.com/your-user-id'
+                className='linkedin'
             />
             <Textarea 
                 label="Profile"
                 textareaHandler={profileHandler}
                 value={savedResume.personalDetails.profile}
+                className='profile'
             />
             {/* <Button 
                 name='Add Scoial' 

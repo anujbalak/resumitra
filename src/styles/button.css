@@ -1,0 +1,95 @@
+/* ---------------general(with image)-------------- */
+
+button.btn-with-icon {
+    cursor: pointer;
+    padding: 0.8em;
+    border: none;
+    background-color: transparent;
+}
+
+button.btn-with-icon:hover, button.btn-with-icon:focus {
+    background-color: transparent;
+}
+
+div.btn-container button {
+    opacity: 60%;
+    transition: opacity ease-in-out 0.2s;
+}
+div.btn-container button:hover, div.btn-container button:focus {
+    opacity: 100%;
+    box-shadow: 0 0 2em rgb(--white-color);
+}
+
+div.label-flyout {
+    z-index: 5;
+    background-color: rgb(var(--pure-black));
+    color: rgb(var(--white-color));
+    position: absolute;
+    left: 5%;
+    transform: translate(0, 20%);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-style: italic;
+    font-size: 0.8rem;
+    will-change: opacity;
+    animation: fade ease-in-out 0.2s;
+}
+
+@keyframes fade {
+ 0% {
+    opacity: 0;
+ }   
+ 100% {
+    opacity: 100%;
+ }
+}
+
+div.label-flyout p {
+    margin: 0;
+
+}
+
+/*-------------enter detail collaps button------------ */
+
+div.enter-details div.btn-container {
+    justify-self: end;
+    margin-right: 1em;
+}
+
+div.enter-details div.btn-container button {
+    padding: 0;
+}
+
+div.enter-details div.btn-container button img {
+    transform: rotate(180deg);
+    width: 30px;
+}
+
+div.enter-details div.btn-container div.label-flyout {
+    transform: translate(400%, 0);
+}
+
+/* ------------------header-------------------- */
+
+header.header div.btn-container button img {
+    width: 30px;
+}
+
+/* ------------------right sidebar-------------------- */
+
+div.right-sidebar>div.btn-container {
+    place-self: start;
+    margin-left: 1em;
+}
+
+div.right-sidebar>div.btn-container  button {
+    padding: 0.2em;
+}
+
+div.right-sidebar>div.btn-container  button img {
+    width: 30px;
+}
+
+div.right-sidebar>div.btn-container div.label-flyout {
+    transform: translate(20%, 0);
+}

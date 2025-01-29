@@ -16,8 +16,8 @@ export default function ButtonWithIcon({label, link, imgSource, btnHandler}) {
             <button
                 className="btn-with-icon"
                 onClick={btnHandler}
-                onMouseOver={handlerMouseOver}
-                onMouseOut={handleMouseOut}
+                onMouseEnter={handlerMouseOver}
+                onMouseLeave={handleMouseOut}
             >
                 {link !== undefined ?
                 <a href={link}>

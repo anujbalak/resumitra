@@ -4,6 +4,11 @@ import "./styles/homepage.css"
 import "./styles/dashboard.css"
 import "./styles/editor.css"
 import "./styles/resume.css"
+import "./styles/button.css"
+import "./styles/input.css"
+import "./styles/left-sidebar.css"
+import "./styles/resume-screen.css"
+import "./styles/right-sidebar.css"
 import Homepage from './web/home/homepage.jsx'
 import Dashboard from "./web/dashboard/Dashboard.jsx";
 import EditPage from "./components/EditPage.jsx"

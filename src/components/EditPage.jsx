@@ -1,14 +1,18 @@
 import { useState } from "react";
-import EnterDetails from "./EnterDetails";
-import Header from "./header";
-import LeftSidebar from "./LeftSidebar";
-import ResumeScreen from "./ResumeScreen";
-import RightSidebar from "./RightSidebar";
+import EnterDetails from "./EnterDetails.jsx";
+import Header from "./Header.jsx";
+import LeftSidebar from "./LeftSidebar.jsx";
+import ResumeScreen from "./ResumeScreen.jsx";
+import RightSidebar from "./RightSidebar.jsx";
 import Resume from "../module/resume.mjs";
+import ButtonWithIcon from "./ButtonWithIcon.jsx"
+import tabIcon from "/svg/tab.svg"
 
 export default function EditPage({resumeDetails, backBtnHandler}) {
     const [resumeData, setResumeData] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
+    const [showRightSidebar, setShowRightSidebar] = useState(true);
+    const [showLeftSidebar, setShowLeftSidebar] = useState(true);
 
     let resume = new Resume();
     if (isLoaded === false) {
@@ -26,16 +30,49 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
         setIsLoaded(true);
     }
 
+    function rightSidebarExpandHanler() {
+        setShowRightSidebar(true)
+    }
+
+    function leftSidebarEpandHandler() {
+        setShowLeftSidebar(true);
+    }
+
     return (
         <>
-        <Header title={resumeDetails.title}/>
-        <LeftSidebar backBtnHandler={backBtnHandler}/>
-        <EnterDetails 
-            resumeData={resumeData} 
-            setResumeData={setResumeData}
-        />
+        <Header>
+            {!showLeftSidebar &&
+                <ButtonWithIcon
+                    label='Expand Sidebar'
+                    imgSource={tabIcon}
+                    btnHandler={leftSidebarEpandHandler}
+                />
+
+            }
+            <p className="title">
+                {resumeDetails.title}
+            </p>
+            {!showRightSidebar && 
+                <ButtonWithIcon
+                    label='Expand Sidebar'
+                    imgSource={tabIcon}
+                    btnHandler={rightSidebarExpandHanler}
+                />
+            }
+        </Header>
+        <LeftSidebar backBtnHandler={backBtnHandler} />
+        {showLeftSidebar &&
+            <>
+                <EnterDetails
+                    resumeData={resumeData}
+                    setResumeData={setResumeData}
+                    setShowLeftSidebar={setShowLeftSidebar} 
+                />
+            </>
+        
+        }
         <ResumeScreen resumeData={resumeData}/>
-        <RightSidebar />
+        {showRightSidebar && <RightSidebar setShowRightSidebar={setShowRightSidebar}/>}
         </>
     )
 }
