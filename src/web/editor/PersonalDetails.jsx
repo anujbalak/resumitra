@@ -151,6 +151,7 @@ function PersonalDetails({resumeData, setResumeData}) {
                 textareaHandler={profileHandler}
                 value={savedResume.personalDetails.profile}
                 className='profile'
+                placeHolder='Write something about yourself...'
             />
             {/* <Button 
                 name='Add Scoial' 

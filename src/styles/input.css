@@ -1,9 +1,9 @@
 /* -------------------general------------------ */
-div.input-container {
+div.input-container, div.textarea-container {
     width: 90%;
     max-width: 500px;
 }
-label.input-label {
+label.input-label, div.textarea-container  {
     display: grid;
     width: 90%;
     gap: 0.3em;
@@ -13,7 +13,7 @@ span.input-text {
     font-size: 1.05rem;
 }
 
-input.input {
+input.input, textarea.text-area {
     outline: none;
     width: 100%;
     justify-self: start;
@@ -30,4 +30,19 @@ input.input {
 
 div.input-container.github, div.input-container.linkedin {
     max-width: 12em;
+}
+
+div.textarea-container {
+    /* display: flex;
+    flex-direction: column; */
+
+}
+textarea.text-area {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+}
+
+span.text-area-text {
+    justify-self: start;
 }
