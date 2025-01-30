@@ -54,6 +54,7 @@ div.label-flyout p {
 div.enter-details div.btn-container {
     justify-self: end;
     margin-right: 1em;
+    cursor: pointer;
 }
 
 div.enter-details div.btn-container button {
@@ -66,24 +67,37 @@ div.enter-details div.btn-container button img {
 }
 
 div.enter-details div.btn-container div.label-flyout {
-    transform: translate(400%, 0);
+    transform: translate(300%, 0);
 }
 
 /* ------------------header-------------------- */
 
 header.header div.btn-container button img {
-    width: 30px;
+    width: 32px;
 }
 
+header.header div.btn-container.left div.label-flyout {
+    transform: translate(calc(10vw + 5em), 120%);
+}
+
+header.header div.btn-container.right div.label-flyout {
+    position: fixed;
+    transform: translate(calc(80vw - 10em), 120%);
+}
+
+header.header div.btn-container button {
+    padding: 0;
+}
 /* ------------------right sidebar-------------------- */
 
 div.right-sidebar>div.btn-container {
     place-self: start;
     margin-left: 1em;
+    cursor: pointer;
 }
 
 div.right-sidebar>div.btn-container  button {
-    padding: 0.2em;
+    padding: 0;
 }
 
 div.right-sidebar>div.btn-container  button img {
@@ -91,5 +105,5 @@ div.right-sidebar>div.btn-container  button img {
 }
 
 div.right-sidebar>div.btn-container div.label-flyout {
-    transform: translate(20%, 0);
+    transform: translate(50%, 0);
 }

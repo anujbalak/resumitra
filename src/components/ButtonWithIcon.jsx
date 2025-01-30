@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function ButtonWithIcon({label, link, imgSource, btnHandler}) {
+export default function ButtonWithIcon({label, link, imgSource, btnHandler, className}) {
     const [isHover, setIsHover] = useState(false)
     
     function handlerMouseOver() {
@@ -11,7 +11,7 @@ export default function ButtonWithIcon({label, link, imgSource, btnHandler}) {
     }
     
     return (
-        <div className="btn-container">
+        <div className={`btn-container ${className}`}>
             {isHover && <ShowLabel label={label} />}
             <button
                 className="btn-with-icon"

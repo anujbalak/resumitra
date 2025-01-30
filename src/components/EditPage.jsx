@@ -46,6 +46,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
                     label='Expand Sidebar'
                     imgSource={tabIcon}
                     btnHandler={leftSidebarEpandHandler}
+                    className="left"
                 />
 
             }
@@ -57,6 +58,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
                     label='Expand Sidebar'
                     imgSource={tabIcon}
                     btnHandler={rightSidebarExpandHanler}
+                    className='right'
                 />
             }
         </Header>
