@@ -5,7 +5,6 @@ div.input-container, div.textarea-container {
 }
 label.input-label, div.textarea-container  {
     display: grid;
-    width: 90%;
     gap: 0.3em;
 }
 span.input-text {
