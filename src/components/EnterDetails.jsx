@@ -1,3 +1,4 @@
+import EducationDetails from "../web/editor/EducationDetails";
 import PersonalDetails from "../web/editor/PersonalDetails";
 import ButtonWithIcon from "./ButtonWithIcon";
 import collapseIcon from "/svg/collapse.svg"
@@ -19,6 +20,10 @@ export default function EnterDetails({resumeData, setResumeData, resume, setShow
                     resumeData={resumeData}
                     setResumeData={setResumeData}
                     resume={resume}
+                />
+                <EducationDetails
+                    resumeData={resumeData}
+                    setResumeData={setResumeData}
                 />
             </div>
         </div>
