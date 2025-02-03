@@ -24,10 +24,13 @@ input.input, textarea.text-area {
     background-color: rgb(13, 13, 13);
     border-radius: 0.2em;
     color: rgb(--white-color);
+}
+
+label, div.textarea-container, div.date-picker-container {
     opacity: 70%;
 }
 
-div.input-container.github, div.input-container.linkedin {
+div.input-container.github, div.input-container.linkedin, div.date-picker-container {
     max-width: 12em;
 }
 
@@ -46,4 +49,49 @@ span.text-area-text {
     justify-self: start;
 }
 
+
 /* --------------------date----------------- */
+
+div.date-picker-container {
+    display: grid;
+    justify-items: start;
+}
+/*
+div.react-date-picker__wrapper {
+    padding: 0.2em;
+    border-radius: 0.2em;
+}
+
+button.react-date-picker__clear-button {
+    display: none;
+}
+
+svg.react-date-picker__calendar-button__icon {
+    stroke: white;
+} */
+
+table {
+    display: none;
+}
+
+/* -----------calender------------ */
+/* div.react-calendar {
+    background-color: rgb(var(--black-color));;
+    font-size: 1.1rem;
+}
+
+div.react-date-picker__calendar {
+    max-width: 300px;
+}
+
+div.react-calendar__navigation button {
+    font-size: 1.2rem;
+}
+
+.react-calendar__year-view.react-calendar__tile {
+    padding: 0;
+    border: solid;
+}
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+    background-color: #ff0000;
+} */

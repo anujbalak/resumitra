@@ -9,8 +9,8 @@ import "./styles/input.css"
 import "./styles/left-sidebar.css"
 import "./styles/resume-screen.css"
 import "./styles/right-sidebar.css"
-import 'react-date-picker/dist/DatePicker.css';
-import 'react-calendar/dist/Calendar.css';
+// import 'react-date-picker/dist/DatePicker.css';
+// import 'react-calendar/dist/Calendar.css';
 import Homepage from './web/home/homepage.jsx'
 import Dashboard from "./web/dashboard/Dashboard.jsx";
 import EditPage from "./components/EditPage.jsx"

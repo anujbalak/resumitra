@@ -1,22 +1,43 @@
 import { useState } from 'react';
-import DatePicker from 'react-date-picker';
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/style.css";
+
 
 // type ValuePiece = Date | null;
 // type Value = ValuePiece | [ValuePiece, ValuePiece]
-export default function DateInput({label}) {
-    const [value, onChange] = useState(new Date());
-    console.log(value)
+export default function DateInput({label, islimit, valueHandler, defaultDate}) {
+    const [selected, setSelected] = useState();
     return (
         <div className="date-picker-container">
-            <DatePicker 
-                value={value}
-                onChange={onChange}
-                format='MM/yyyy'
-                clearIcon
-                maxDetail='year'
-                className='date-picker'
-                maxDate={new Date()}
-            />
+            <span className="date-label-text start">{label}</span>
+            {islimit ?
+                <DayPicker
+                    defaultMonth={defaultDate} 
+                    mode="single"
+                    captionLayout="dropdown"
+                    selected={selected}
+                    hideWeekdays
+                    hideNavigation
+                    onSelect={setSelected}
+                    endMonth={new Date()}
+                    startMonth={new Date(1950, 1)}
+                    hidden
+                    onMonthChange={valueHandler}
+                />
+            :
+                <DayPicker 
+                    mode="single"
+                    captionLayout="dropdown"
+                    selected={selected}
+                    hideWeekdays
+                    hideNavigation
+                    onSelect={setSelected}
+                    endMonth={new Date(2035, 1)}
+                    startMonth={new Date(1950, 1)}
+                    hidden
+                    onMonthChange={valueHandler}
+                />
+            }
         </div>
     )
 }

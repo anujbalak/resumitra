@@ -39,7 +39,7 @@ div.left-sidebar>div.btn-container button img {
     width: 34px;
 }
 
-div.personal-details-container {
+div.personal-details-container, div.institute-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -47,14 +47,35 @@ div.personal-details-container {
     gap: 1.5em;
 }
 
+h2.group-heading {
+    margin: 0;
+    font-size: 1.3rem;
+    justify-self: start;
+    
+}
+
 div.enter-details-content {
     margin-left: 1em;
+    display: grid;
+    gap: 2em;
+}
+
+div.education-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
 }
 
 div.enter-details {
     /* overflow: auto; */
     animation: slide 0.3s ease-in-out;
     will-change: transform, opacity;
+}
+
+hr {
+    width: 90%;
+    margin: 0;
+    opacity: 70%;
 }
 
 @keyframes slide {

@@ -30,7 +30,9 @@ export class Social {
 
 class Education {
     constructor() {
-        this.institute = new EducationInstitute();        
+        this.institute1 = new EducationInstitute(1);  
+        this.institute2 = new EducationInstitute(0);
+        this.institute3 = new EducationInstitute(0);
     }
 }
 
@@ -66,7 +68,8 @@ export class ExperienceCompany {
 }
 
 export class EducationInstitute {
-    constructor() {
+    constructor(status) {
+        this.activationStatus =  status;
         this.name = null
         this.startDate = null
         this.EndDate = null;
