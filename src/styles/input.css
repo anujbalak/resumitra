@@ -43,6 +43,7 @@ textarea.text-area {
     width: 100%;
     resize: none;
     background-color: transparent;
+    height: min-content;
 }
 
 span.text-area-text {

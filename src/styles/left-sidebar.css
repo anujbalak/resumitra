@@ -39,7 +39,7 @@ div.left-sidebar>div.btn-container button img {
     width: 34px;
 }
 
-div.personal-details-container, div.institute-container{
+div.personal-details-container, div.institute-container, div.comp-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -60,7 +60,7 @@ div.enter-details-content {
     gap: 2em;
 }
 
-div.education-details-container {
+div.education-details-container, div.experience-container {
     display: flex;
     flex-direction: column;
     gap: 2.5em;

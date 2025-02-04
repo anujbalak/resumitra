@@ -3,6 +3,7 @@ import homeIcon from "/svg/home-angle.svg"
 import personalIcon from "/svg/personal.svg"
 import educationIcon from "/svg/education.svg"
 import projectIcon from "/svg/project-new.svg"
+import experienceIcon from "/svg/user-pen.svg"
 
 export default function LeftSidebar({backBtnHandler}) {
     return (
@@ -22,6 +23,11 @@ export default function LeftSidebar({backBtnHandler}) {
                     label="Education Details"
                     link="#education-details"
                     imgSource={educationIcon}
+                />
+                <ButtonWithIcon
+                    label="Experience"
+                    link="#experience"
+                    imgSource={experienceIcon}
                 />
                 <ButtonWithIcon
                     label="Projects"

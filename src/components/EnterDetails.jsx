@@ -1,4 +1,5 @@
 import EducationDetails from "../web/editor/EducationDetails";
+import Experience from "../web/editor/Experience";
 import PersonalDetails from "../web/editor/PersonalDetails";
 import ButtonWithIcon from "./ButtonWithIcon";
 import collapseIcon from "/svg/collapse.svg"
@@ -24,6 +25,13 @@ export default function EnterDetails({resumeData, setResumeData, resume, setShow
                 />
                 <h2 className="group-heading" id="education-details">Education Details</h2>
                 <EducationDetails
+                    resumeData={resumeData}
+                    setResumeData={setResumeData}
+                />
+                <h2 className="group-heading" id="experience">
+                    Experience
+                </h2>
+                <Experience
                     resumeData={resumeData}
                     setResumeData={setResumeData}
                 />

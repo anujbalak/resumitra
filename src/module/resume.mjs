@@ -45,7 +45,9 @@ class Projects {
 
 class Experience {
     constructor() {
-        this.exp = new ExperienceCompany();
+        this.comp1 = new ExperienceCompany(1);
+        this.comp2 = new ExperienceCompany(0);
+        this.comp3 = new ExperienceCompany(0);
     }
 }
 
@@ -57,7 +59,8 @@ export class Project {
 }
 
 export class ExperienceCompany {
-    constructor() {
+    constructor(code) {
+        this.activationStatus = code
         this.post = null
         this.company = null;
         this.startDate = null;
