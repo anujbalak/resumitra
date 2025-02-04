@@ -1,11 +1,11 @@
 export default function Textarea({label, textareaHandler, value, className, placeHolder}) {
 
     document.querySelectorAll("textarea").forEach(function(textarea) {
-        textarea.style.height = textarea.scrollHeight + "px";
+        textarea.style.height = textarea.height + "px";
         textarea.style.overflowY = "hidden";
       
         textarea.addEventListener("input", function() {
-          this.style.height = "auto";
+          this.style.height = "min-content";
           this.style.height = this.scrollHeight + "px";
         });
       })
@@ -14,7 +14,6 @@ export default function Textarea({label, textareaHandler, value, className, plac
         <div className="textarea-container">
             <span className={`text-area-text ${className}`}>{label}</span>
             <textarea 
-                rows={5}
                 className={`text-area ${className}`}
                 name="textarea" 
                 onChange={textareaHandler}
