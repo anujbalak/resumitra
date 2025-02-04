@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { DayPicker } from "react-day-picker";
+import {format} from "date-fns"
 import "react-day-picker/style.css";
 
 
 // type ValuePiece = Date | null;
 // type Value = ValuePiece | [ValuePiece, ValuePiece]
 export default function DateInput({label, islimit, valueHandler, defaultDate}) {
-    const [selected, setSelected] = useState();
+    const [selected, setSelected] = useState(new Date());
     return (
         <div className="date-picker-container">
             <span className="date-label-text start">{label}</span>
             {islimit ?
                 <DayPicker
-                    defaultMonth={defaultDate} 
                     mode="single"
                     captionLayout="dropdown"
                     selected={selected}
