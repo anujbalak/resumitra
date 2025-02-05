@@ -38,7 +38,9 @@ class Education {
 
 class Projects {
     constructor() {
-        this.project = new Project();
+        this.project1 = new Project(1);
+        this.project2 = new Project(0);
+        this.project3= new Project(0);
     }
 }
 
@@ -52,7 +54,8 @@ class Experience {
 }
 
 export class Project {
-    constructor() {
+    constructor(code) {
+        this.activationStatus = code;
         this.name = null;
         this.details = null;
     }

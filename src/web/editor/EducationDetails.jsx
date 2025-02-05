@@ -26,6 +26,7 @@ export default function EducationDetails({resumeData, setResumeData}) {
                 }
             })
         } else if (activatedInstitute[1] === 1) {
+            activatedInstitute.splice(2, 1, 1)
             setResumeData({
                 ...resumeData,
                 educationDetails: {

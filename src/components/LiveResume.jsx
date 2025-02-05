@@ -131,6 +131,36 @@ export default function LiveResume({resumeData}) {
                     </div>
                 }
             </div>
+            <div className="projects">
+                <div className="project1">
+                    <p className="name">
+                        {resumeData.projects.project1.name}
+                    </p>
+                    <p className="details">
+                        {resumeData.projects.project1.details}
+                    </p>
+                </div>
+                {resumeData.projects.project2.activationStatus === 1 && 
+                    <div className="project2">
+                        <p className="name">
+                            {resumeData.projects.project2.name}
+                        </p>
+                        <p className="details">
+                            {resumeData.projects.project2.details}
+                        </p>
+                    </div>
+                }
+                {resumeData.projects.project3.activationStatus === 1 && 
+                    <div className="project3">
+                        <p className="name">
+                            {resumeData.projects.project3.name}
+                        </p>
+                        <p className="details">
+                            {resumeData.projects.project3.details}
+                        </p>
+                    </div>
+                }
+            </div>
         </div>
     )
 }

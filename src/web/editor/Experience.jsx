@@ -24,6 +24,7 @@ export default function Experience({resumeData, setResumeData}) {
                 }
             })
         } else if (activatedComps[1] === 1) {
+            activatedComps.splice(2, 1, 1)
             setResumeData({
                 ...resumeData,
                 experience: {
