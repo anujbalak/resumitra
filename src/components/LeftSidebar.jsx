@@ -5,7 +5,7 @@ import educationIcon from "/svg/education.svg"
 import projectIcon from "/svg/project-new.svg"
 import experienceIcon from "/svg/user-pen.svg"
 
-export default function LeftSidebar({backBtnHandler}) {
+export default function LeftSidebar({backBtnHandler, showFieldHandler}) {
     return (
         <div className="left-sidebar">
             <ButtonWithIcon
@@ -18,21 +18,25 @@ export default function LeftSidebar({backBtnHandler}) {
                     label="Personal Details"
                     link='#personal-details'
                     imgSource={personalIcon}
+                    btnHandler={showFieldHandler}
                 />
                 <ButtonWithIcon
                     label="Education Details"
                     link="#education-details"
                     imgSource={educationIcon}
+                    btnHandler={showFieldHandler}
                 />
                 <ButtonWithIcon
                     label="Experience"
                     link="#experience"
                     imgSource={experienceIcon}
+                    btnHandler={showFieldHandler}
                 />
                 <ButtonWithIcon
                     label="Projects"
                     link="#projects"
                     imgSource={projectIcon}
+                    btnHandler={showFieldHandler}
                 />
             </div>
         </div>

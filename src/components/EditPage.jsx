@@ -62,7 +62,10 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
                 />
             }
         </Header>
-        <LeftSidebar backBtnHandler={backBtnHandler} />
+        <LeftSidebar 
+            ackBtnHandler={backBtnHandler} 
+            showFieldHandler={leftSidebarEpandHandler}
+        />
         {showLeftSidebar &&
             <>
                 <EnterDetails
