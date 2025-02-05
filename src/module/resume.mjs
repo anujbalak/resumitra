@@ -40,7 +40,7 @@ class Projects {
     constructor() {
         this.project1 = new Project(1);
         this.project2 = new Project(0);
-        this.project3= new Project(0);
+        this.project3 = new Project(0);
     }
 }
 
