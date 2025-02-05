@@ -1,0 +1,24 @@
+/* div.resume-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+div.resume-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.live-resume {
+    margin: 2em;
+    background-color: #fff;
+    width: 602px;
+    /* 2408px */
+    height: 877px; 
+    /* 3508px */
+    box-shadow: 0 0 1em rgb(var(--pure-black));
+    color: black;
+    overflow: auto;
+}
+

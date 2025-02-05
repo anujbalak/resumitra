@@ -3,7 +3,6 @@ import './App.css'
 import "./styles/homepage.css"
 import "./styles/dashboard.css"
 import "./styles/editor.css"
-import "./styles/resume.css"
 import "./styles/button.css"
 import "./styles/input.css"
 import "./styles/left-sidebar.css"
