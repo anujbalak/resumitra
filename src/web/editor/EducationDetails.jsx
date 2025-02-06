@@ -113,7 +113,7 @@ function Institute1({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute1: {
                     ...resumeData.educationDetails.institute1,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -127,7 +127,7 @@ function Institute1({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute1: {
                     ...resumeData.educationDetails.institute1,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -225,7 +225,7 @@ function Institute2({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute2: {
                     ...resumeData.educationDetails.institute2,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -239,7 +239,7 @@ function Institute2({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute2: {
                     ...resumeData.educationDetails.institute2,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -338,7 +338,7 @@ function Institute3({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute3: {
                     ...resumeData.educationDetails.institute3,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -352,7 +352,7 @@ function Institute3({resumeData, setResumeData}) {
                 ...resumeData.educationDetails,
                 institute3: {
                     ...resumeData.educationDetails.institute3,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
