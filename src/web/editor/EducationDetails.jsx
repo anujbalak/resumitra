@@ -134,6 +134,20 @@ function Institute1({resumeData, setResumeData}) {
         localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
     }
 
+    function scoreHandler(e) {
+        setResumeData({
+            ...resumeData,
+            educationDetails: {
+                ...resumeData.educationDetails,
+                institute1: {
+                    ...resumeData.educationDetails.institute1,
+                    score: e.target.value
+                }
+            }
+        })
+        localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
+    }
+
 
     const savedResume = JSON.parse(localStorage.getItem(resumeData.id))
     return (
@@ -163,6 +177,13 @@ function Institute1({resumeData, setResumeData}) {
                 label="End Date"
                 valueHandler={endDateHandler}
                 defaultDate={savedResume.educationDetails.institute1.endDate}
+            />
+            <Input
+                type="number"
+                label="Score"
+                inputHandler={scoreHandler}
+                value={savedResume.educationDetails.institute1.score}
+                className="score"
             />
         </div>
     )
@@ -225,6 +246,21 @@ function Institute2({resumeData, setResumeData}) {
         localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
     }
 
+    function scoreHandler(e) {
+        setResumeData({
+            ...resumeData,
+            educationDetails: {
+                ...resumeData.educationDetails,
+                institute2: {
+                    ...resumeData.educationDetails.institute2,
+                    score: e.target.value
+                }
+            }
+        })
+        localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
+    }
+
+
 
     const savedResume = JSON.parse(localStorage.getItem(resumeData.id))
     return (
@@ -254,6 +290,13 @@ function Institute2({resumeData, setResumeData}) {
                 label="End Date"
                 valueHandler={endDateHandler}
                 defaultDate={savedResume.educationDetails.institute2.endDate}
+            />
+            <Input
+                type="number"
+                label="Score"
+                inputHandler={scoreHandler}
+                value={savedResume.educationDetails.institute2.score}
+                className="score"
             />
         </div>
     )
@@ -316,6 +359,21 @@ function Institute3({resumeData, setResumeData}) {
         localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
     }
 
+    function scoreHandler(e) {
+        setResumeData({
+            ...resumeData,
+            educationDetails: {
+                ...resumeData.educationDetails,
+                institute3: {
+                    ...resumeData.educationDetails.institute3,
+                    score: e.target.value
+                }
+            }
+        })
+        localStorage.setItem(resumeData.id, JSON.stringify(resumeData));
+    }
+
+
 
     const savedResume = JSON.parse(localStorage.getItem(resumeData.id))
     return (
@@ -345,6 +403,13 @@ function Institute3({resumeData, setResumeData}) {
                 label="End Date"
                 valueHandler={endDateHandler}
                 defaultDate={savedResume.educationDetails.institute3.endDate}
+            />
+            <Input
+                type="number"
+                label="Score"
+                inputHandler={scoreHandler}
+                value={savedResume.educationDetails.institute3.score}
+                className="score"
             />
         </div>
     )
