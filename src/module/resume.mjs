@@ -67,7 +67,7 @@ export class ExperienceCompany {
         this.post = null
         this.company = null;
         this.startDate = null;
-        this.EndDate = null;
+        this.endDate = null;
         this.location = null;
         this.details = null
     }
