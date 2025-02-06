@@ -21,18 +21,21 @@ export default function LiveResume({resumeData}) {
                 {resumeData.personalDetails.linkedin && 
                     <a href={resumeData.personalDetails.linkedin}>Linkedin</a>
                 }
-                <p className="profile">
-                    {resumeData.personalDetails.profile}
-                </p>
+                <div className="profile-container">
+                    <p className="profile-label">
+                        Profile
+                    </p>
+                    <p className="profile">
+                        {resumeData.personalDetails.profile}
+                    </p>
+                </div>
             </div>
-            <hr />
             <div className="education-details">
+                <h2 className="education-label">Education</h2>
+                <hr />
                 <div className="institute1">
                     <p className="name">
                         {resumeData.educationDetails.institute1.name}
-                    </p>
-                    <p className="course">
-                        {resumeData.educationDetails.institute1.course}
                     </p>
                     <p className="startDate">
                         {resumeData.educationDetails.institute1.startDate}
@@ -40,20 +43,29 @@ export default function LiveResume({resumeData}) {
                     <p className="endDate">
                         {resumeData.educationDetails.institute1.endDate}
                     </p>
+                    <p className="course">
+                        {resumeData.educationDetails.institute1.course}
+                    </p>
+                    <p className="score">
+                        {resumeData.educationDetails.institute1.score}
+                    </p>
                 </div>
                 {resumeData.educationDetails.institute2.activationStatus === 1 && 
                     <div className="institute2">
                         <p className="name">
                             {resumeData.educationDetails.institute2.name}
                         </p>
-                        <p className="course">
-                            {resumeData.educationDetails.institute2.course}
-                        </p>
                         <p className="startDate">
                             {resumeData.educationDetails.institute2.startDate}
                         </p>
                         <p className="endDate">
                             {resumeData.educationDetails.institute2.endDate}
+                        </p>
+                        <p className="course">
+                            {resumeData.educationDetails.institute2.course}
+                        </p>
+                        <p className="score">
+                            {resumeData.educationDetails.institute2.score}
                         </p>
                     </div>
                 }
@@ -62,14 +74,17 @@ export default function LiveResume({resumeData}) {
                         <p className="name">
                             {resumeData.educationDetails.institute3.name}
                         </p>
-                        <p className="course">
-                            {resumeData.educationDetails.institute3.course}
-                        </p>
                         <p className="startDate">
                             {resumeData.educationDetails.institute3.startDate}
                         </p>
                         <p className="endDate">
                             {resumeData.educationDetails.institute3.endDate}
+                        </p>
+                        <p className="course">
+                            {resumeData.educationDetails.institute3.course}
+                        </p>
+                        <p className="score">
+                            {resumeData.educationDetails.institute3.score}
                         </p>
                     </div>
                 }
