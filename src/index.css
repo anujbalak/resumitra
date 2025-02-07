@@ -16,6 +16,11 @@
   --border-color: 100, 100 ,100;
 }
 
+html {
+  background-color: rgb(var(--black-color));
+  color: rgb(var(--white-color));
+}
+
 @font-face {
   font-family: "dm sans";
   src: url(/fonts/dm-sans-latin-500-normal.woff), url(/fonts/dm-sans-latin-500-normal.woff2);
