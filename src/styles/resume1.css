@@ -23,6 +23,10 @@ div.live-resume {
     font-size: 0.8em;
 }
 
+div.live-resume p {
+    margin: 0;
+}
+
 div.live-resume {
     /* font-family: 'Dosis Variable', sans-serif; */
     font-family: 'Space Grotesk Variable', sans-serif;
@@ -74,44 +78,41 @@ div.personal-details p.profile {
 }
 
 /* --------------------education---------------------------- */
-div.education-details {
+div.education-details, div.experience {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-div.education-details div + div {
+div.education-details div + div, div.experience div + div {
     margin-top: 1em;
 }
 
-div.education-details p {
-    margin: 0;
-}
-
-h2.education-label {
-    margin: 0.5em auto 0.2em auto;
+h2.education-label, h2.experience-label, h2.projects-label {
+    margin: 0.2em auto 0.2em auto;
     font-size: 1.3rem;
 } 
 
-div.education-details > div {
+div.education-details > div, div.experience > div {
     text-align: left;
     margin-left: calc(20% + 1em);
     flex: 1 1 100%;
-}
-
-div.education-details > div {
     display: flex;
     flex-wrap: wrap;
     column-gap: 0.5em;
     margin-right: 1em;
 }
 
+div.education-details > div {
+}
+
 div.education-details p.name{
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex: 62%;
 }
-div.education-details p.startDate::after {
+
+p.startDate::after {
     margin-left: 0.5em;
     content: '-';
 }
@@ -122,4 +123,25 @@ div.education-details p.endDate, div.education-details p.startDate {
 
 div.live-resume hr {
     width: 95%;
+}
+
+/* --------------experienc------------------- */
+
+p.post, p.company {
+    font-weight: 700;
+    font-size: 1rem;
+    flex: 100%;
+}
+
+div.experience div p.location {
+    margin-right: 1em;
+}
+
+p.location, p.startDate, p.endDate {
+    opacity: 80%;
+}
+
+div.experience div p.details {
+    flex: 100%;
+    font-size: 0.85rem;
 }
