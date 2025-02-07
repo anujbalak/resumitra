@@ -37,9 +37,12 @@ export default function LiveResume({resumeData}) {
                     <p className="name">
                         {resumeData.educationDetails.institute1.name}
                     </p>
-                    <p className="startDate">
-                        {resumeData.educationDetails.institute1.startDate}
-                    </p>
+                    {
+                        resumeData.educationDetails.institute1.startDate &&
+                        <p className="startDate">
+                            {resumeData.educationDetails.institute1.startDate}
+                        </p>
+                    }
                     <p className="endDate">
                         {resumeData.educationDetails.institute1.endDate}
                     </p>
@@ -55,9 +58,12 @@ export default function LiveResume({resumeData}) {
                         <p className="name">
                             {resumeData.educationDetails.institute2.name}
                         </p>
-                        <p className="startDate">
-                            {resumeData.educationDetails.institute2.startDate}
-                        </p>
+                        {
+                            resumeData.educationDetails.institute2.startDate &&
+                            <p className="startDate">
+                                {resumeData.educationDetails.institute2.startDate}
+                            </p>
+                        }
                         <p className="endDate">
                             {resumeData.educationDetails.institute2.endDate}
                         </p>
@@ -74,9 +80,12 @@ export default function LiveResume({resumeData}) {
                         <p className="name">
                             {resumeData.educationDetails.institute3.name}
                         </p>
-                        <p className="startDate">
-                            {resumeData.educationDetails.institute3.startDate}
-                        </p>
+                        {
+                            resumeData.educationDetails.institute3.startDate &&
+                            <p className="startDate">
+                                {resumeData.educationDetails.institute3.startDate}
+                            </p>
+                        }
                         <p className="endDate">
                             {resumeData.educationDetails.institute3.endDate}
                         </p>
