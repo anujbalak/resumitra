@@ -98,8 +98,9 @@ export default function LiveResume({resumeData}) {
                     </div>
                 }
             </div>
-            <hr />
             <div className="exprience">
+                <h2 className="experience-label">Experience</h2>
+                <hr />
                 <div className="comp1">
                     <p className="post">
                         {resumeData.experience.comp1.post}
@@ -156,6 +157,8 @@ export default function LiveResume({resumeData}) {
                 }
             </div>
             <div className="projects">
+                <h2 className="projects-label">Projects</h2>
+                <hr />
                 <div className="project1">
                     <p className="name">
                         {resumeData.projects.project1.name}
