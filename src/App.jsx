@@ -8,6 +8,11 @@ import "./styles/input.css"
 import "./styles/left-sidebar.css"
 import "./styles/resume-screen.css"
 import "./styles/right-sidebar.css"
+
+// Supports weights 300-700
+import '@fontsource-variable/space-grotesk';
+// Supports weights 200-800
+import '@fontsource-variable/dosis';
 // import 'react-date-picker/dist/DatePicker.css';
 // import 'react-calendar/dist/Calendar.css';
 import Homepage from './web/home/homepage.jsx'
