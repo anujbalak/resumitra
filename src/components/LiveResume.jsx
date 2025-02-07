@@ -98,7 +98,7 @@ export default function LiveResume({resumeData}) {
                     </div>
                 }
             </div>
-            <div className="exprience">
+            <div className="experience">
                 <h2 className="experience-label">Experience</h2>
                 <hr />
                 <div className="comp1">
