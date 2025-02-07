@@ -64,6 +64,11 @@ div.personal-details p.mobile {
     text-align: left;
 }
 
+div.personal-details a {
+    color: rgb(var(--text-color));
+    text-decoration-line: underline;
+}
+
 div.personal-details div.profile-container {
     flex: 1 0 100%;
     display: grid;
@@ -141,7 +146,7 @@ p.location, p.startDate, p.endDate {
     opacity: 80%;
 }
 
-div.experience div p.details {
+p.details {
     flex: 100%;
     font-size: 0.85rem;
 }
