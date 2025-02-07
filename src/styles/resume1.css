@@ -10,7 +10,7 @@ div.resume-screen {
     min-height: 100vh;
 }
 
-div.live-resume {
+div.render-resume {
     margin: 2em;
     background-color: #fff;
     width: 602px;
@@ -28,8 +28,10 @@ div.live-resume p {
 }
 
 div.live-resume {
+    margin: 1em 2em;
     /* font-family: 'Dosis Variable', sans-serif; */
     font-family: 'Space Grotesk Variable', sans-serif;
+    font-size: 12px;
 }
 
 div.personal-details {
@@ -72,14 +74,12 @@ div.personal-details a {
 div.personal-details div.profile-container {
     flex: 1 0 100%;
     display: grid;
-    grid-template-columns: 20% 1fr;
+    /* grid-template-columns: 20% 1fr; */
 }
 
 div.personal-details p.profile {
     text-align: left;
     margin: 0 1em;
-    font-weight: 500;
-    line-height: 1.3;
 }
 
 /* --------------------education---------------------------- */
@@ -90,17 +90,17 @@ div.education-details, div.experience, div.projects {
 }
 
 div.education-details div + div, div.experience div + div, div.projects div + div {
-    margin-top: 1em;
+    margin-top: 0.6em;
 }
 
-h2.education-label, h2.experience-label, h2.projects-label {
+h2.education-label, h2.experience-label, h2.projects-label, h2.profile-label {
     margin: 0.3em auto 0.2em auto;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 } 
 
 div.education-details > div, div.experience > div, div.projects > div {
     text-align: left;
-    margin-left: calc(20% + 1em);
+    margin-left: calc(1em);
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
@@ -113,8 +113,8 @@ div.education-details > div {
 
 div.education-details p.name{
     font-weight: 700;
-    font-size: 1rem;
-    flex: 62%;
+    font-size: 0.9rem;
+    flex: 70%;
 }
 
 p.startDate::after {
@@ -134,7 +134,7 @@ div.live-resume hr {
 
 p.post, p.company {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
     flex: 100%;
 }
 
@@ -154,7 +154,7 @@ p.details {
 
 /* ----------------projects------------------ */
 div.projects div p.name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     flex: 100%;
 }
