@@ -115,7 +115,7 @@ function Comp1({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp1: {
                     ...resumeData.experience.comp1,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -129,7 +129,7 @@ function Comp1({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp1: {
                     ...resumeData.experience.comp1,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -252,7 +252,7 @@ function Comp2({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp2: {
                     ...resumeData.experience.comp2,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -266,7 +266,7 @@ function Comp2({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp2: {
                     ...resumeData.experience.comp2,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -390,7 +390,7 @@ function Comp3({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp3: {
                     ...resumeData.experience.comp3,
-                    startDate: format(date, "MMMM/yyyy")
+                    startDate: format(date, "MMM/yyyy")
                 }
             }
         })
@@ -404,7 +404,7 @@ function Comp3({resumeData, setResumeData}) {
                 ...resumeData.experience,
                 comp3: {
                     ...resumeData.experience.comp3,
-                    endDate: format(date, "MMMM/yyyy")
+                    endDate: format(date, "MMM/yyyy")
                 }
             }
         })
