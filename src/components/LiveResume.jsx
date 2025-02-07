@@ -108,13 +108,13 @@ export default function LiveResume({resumeData}) {
                     <p className="company">
                         {resumeData.experience.comp1.company}
                     </p>
+                    <p className="location">
+                        {resumeData.experience.comp1.location}
+                    </p>
                     <p className="startDate">
                         {resumeData.experience.comp1.startDate}
                     </p>
                     <p className="endDate">{resumeData.experience.comp1.endDate}</p>
-                    <p className="location">
-                        {resumeData.experience.comp1.location}
-                    </p>
                     <p className="details">
                         {resumeData.experience.comp1.details}
                     </p>
@@ -127,14 +127,14 @@ export default function LiveResume({resumeData}) {
                         <p className="company">
                             {resumeData.experience.comp2.company}
                         </p>
+                        <p className="location">
+                            {resumeData.experience.comp2.location}
+                        </p>
                         <p className="startDate">
                             {resumeData.experience.comp2.startDate}
                         </p>
                         <p className="endDate">
                             {resumeData.experience.comp2.endDate}
-                        </p>
-                        <p className="location">
-                            {resumeData.experience.comp2.location}
                         </p>
                         <p className="details">
                             {resumeData.experience.comp2.details}
@@ -145,11 +145,11 @@ export default function LiveResume({resumeData}) {
                     <div className="comp3">
                         <p className="post">{resumeData.experience.comp3.post}</p>
                         <p className="course">{resumeData.experience.comp3.company}</p>
-                        <p className="startDate">{resumeData.experience.comp3.startDate}</p>
-                        <p className="endDate">{resumeData.experience.comp3.endDate}</p>
                         <p className="location">
                             {resumeData.experience.comp3.location}
                         </p>
+                        <p className="startDate">{resumeData.experience.comp3.startDate}</p>
+                        <p className="endDate">{resumeData.experience.comp3.endDate}</p>
                         <p className="details">
                             {resumeData.experience.comp3.details}
                         </p>
