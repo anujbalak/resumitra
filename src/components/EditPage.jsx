@@ -63,7 +63,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
             }
         </Header>
         <LeftSidebar 
-            ackBtnHandler={backBtnHandler} 
+            backBtnHandler={backBtnHandler} 
             showFieldHandler={leftSidebarEpandHandler}
         />
         {showLeftSidebar &&
@@ -77,7 +77,11 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
         
         }
         <ResumeScreen resumeData={resumeData}/>
-        {showRightSidebar && <RightSidebar setShowRightSidebar={setShowRightSidebar}/>}
+        {showRightSidebar && 
+            <RightSidebar 
+                setShowRightSidebar={setShowRightSidebar}
+                resumeData={resumeData}
+            />}
         </>
     )
 }
