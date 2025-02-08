@@ -44,7 +44,7 @@ div.resumes {
 }
 
 div.resume-container {
-    width: 301px;
+    width: 310px;
     display: grid;
     grid-template-rows: 438.5px min-content;
     border: 2px solid rgb(var(--border-color));
@@ -57,7 +57,7 @@ div.resume-preview-small {
 }
 
 div.resume-preview-small {
-    transform: scale(0.5);
+    transform: scale(0.39);
     width: 300px;
     transform-origin: top left 10px;
 }
