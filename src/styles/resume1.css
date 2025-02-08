@@ -3,36 +3,6 @@
     justify-content: center;
     align-items: center;
 } */
-div.resume-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-div.render-resume {
-    margin: 2em;
-    background-color: #fff;
-    width: 602px;
-    /* 2408px */
-    height: 877px; 
-    /* 3508px */
-    box-shadow: 0 0 1em rgb(var(--pure-black));
-    color: black;
-    overflow: auto;
-    font-size: 0.8em;
-}
-
-div.live-resume p {
-    margin: 0;
-}
-
-div.live-resume {
-    margin: 1em 2em;
-    /* font-family: 'Dosis Variable', sans-serif; */
-    font-family: 'Space Grotesk Variable', sans-serif;
-    font-size: 12px;
-}
 
 div.personal-details {
     display: flex;
@@ -42,7 +12,7 @@ div.personal-details {
 }
 
 div.personal-details h1.name {
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0;
     margin-top: 0.5em;
     flex: 1 1 100%;
@@ -80,6 +50,7 @@ div.personal-details div.profile-container {
 div.personal-details p.profile {
     text-align: left;
     margin: 0 1em;
+    font-size: 0.9rem;
 }
 
 /* --------------------education---------------------------- */
@@ -95,7 +66,7 @@ div.education-details div + div, div.experience div + div, div.projects div + di
 
 h2.education-label, h2.experience-label, h2.projects-label, h2.profile-label {
     margin: 0.3em auto 0.2em auto;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 } 
 
 div.education-details > div, div.experience > div, div.projects > div {
@@ -113,7 +84,7 @@ div.education-details > div {
 
 div.education-details p.name{
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex: 70%;
 }
 
@@ -134,7 +105,7 @@ div.live-resume hr {
 
 p.post, p.company {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex: 100%;
 }
 
@@ -144,6 +115,7 @@ div.experience div p.location {
 
 p.location, p.startDate, p.endDate {
     opacity: 80%;
+    font-size: 0.9rem;
 }
 
 p.details {
@@ -154,7 +126,7 @@ p.details {
 
 /* ----------------projects------------------ */
 div.projects div p.name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     flex: 100%;
 }

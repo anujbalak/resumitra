@@ -4,8 +4,10 @@ import personalIcon from "/svg/personal.svg"
 import educationIcon from "/svg/education.svg"
 import projectIcon from "/svg/project-new.svg"
 import experienceIcon from "/svg/user-pen.svg"
+import printIcon from "/svg/print.svg";
 
-export default function LeftSidebar({backBtnHandler, showFieldHandler}) {
+export default function LeftSidebar({backBtnHandler, showFieldHandler, handlePrint}) {
+
     return (
         <div className="left-sidebar">
             <ButtonWithIcon
@@ -38,6 +40,15 @@ export default function LeftSidebar({backBtnHandler, showFieldHandler}) {
                     imgSource={projectIcon}
                     btnHandler={showFieldHandler}
                 />
+            </div>
+            <div className="print-button-container">
+                <div>
+                    <ButtonWithIcon
+                        label="Print"
+                        imgSource={printIcon}
+                        btnHandler={handlePrint}
+                    />
+                </div>
             </div>
         </div>
     )

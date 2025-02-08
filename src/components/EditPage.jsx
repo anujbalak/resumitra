@@ -8,11 +8,17 @@ import Resume from "../module/resume.mjs";
 import ButtonWithIcon from "./ButtonWithIcon.jsx"
 import tabIcon from "/svg/tab.svg"
 
+import { useReactToPrint } from "react-to-print";
+import { useRef } from "react";
+
 export default function EditPage({resumeDetails, backBtnHandler}) {
     const [resumeData, setResumeData] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
     const [showRightSidebar, setShowRightSidebar] = useState(true);
     const [showLeftSidebar, setShowLeftSidebar] = useState(true);
+
+    const contentRef = useRef(null);
+    const handlePrint = useReactToPrint({ contentRef }); 
 
     let resume = new Resume();
     if (isLoaded === false) {
@@ -65,6 +71,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
         <LeftSidebar 
             backBtnHandler={backBtnHandler} 
             showFieldHandler={leftSidebarEpandHandler}
+            handlePrint={handlePrint}
         />
         {showLeftSidebar &&
             <>
@@ -76,7 +83,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
             </>
         
         }
-        <ResumeScreen resumeData={resumeData}/>
+        <ResumeScreen resumeData={resumeData} contentRef={contentRef}/>
         {showRightSidebar && 
             <RightSidebar 
                 setShowRightSidebar={setShowRightSidebar}

@@ -1,7 +1,9 @@
-export default function LiveResume({resumeData}) {
+
+
+export default function LiveResume({resumeData, contentRef}) {
     
     return (
-        <div className="render-resume">
+        <div className="render-resume" ref={contentRef}>
             <div className="live-resume preset1">
                 <div className="personal-details">
                     <h1 className="name">

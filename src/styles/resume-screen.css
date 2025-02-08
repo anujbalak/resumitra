@@ -2,3 +2,46 @@ div.resume-screen {
     height: calc(100% - 50px);
     overflow: auto;
 }
+
+div.resume-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.render-resume {
+    background-color: #fff;
+    /* 2408px */
+    width: 8.3in;
+    height: 11.7in;
+    /* 3508px */
+    box-shadow: 0 0 1em rgb(var(--pure-black));
+    color: black;
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+div.live-resume p {
+    margin: 0;
+}
+
+div.live-resume {
+    margin: 1em 2em;
+    /* font-family: 'Dosis Variable', sans-serif; */
+    font-family: 'Space Grotesk Variable', sans-serif;
+    font-size: 17px;
+}
+
+@media print {
+    div.render-resume {
+        margin: 0; 
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    /* div.render-resume {
+        transform: scale(0.5);
+        transform-origin: top left;
+    } */
+}
