@@ -441,7 +441,6 @@ function Comp3({resumeData, setResumeData}) {
 
 
     const savedResume = JSON.parse(localStorage.getItem(resumeData.id))
-    console.log(savedResume.experience)
     return (
         <div className="comp-container">
             <Input

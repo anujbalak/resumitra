@@ -8,8 +8,6 @@ export default function Projects({resumeData, setResumeData}) {
     Object.entries(resumeData.projects).forEach((key) => {
         return activatedProjects.push(key[1].activationStatus);
     })
-
-    console.log(activatedProjects)
     function addProjectHandler() {
         console.log(activatedProjects)
         if (activatedProjects[0] === 1 && activatedProjects[1] === 0) {
