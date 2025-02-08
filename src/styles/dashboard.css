@@ -44,16 +44,32 @@ div.resumes {
 }
 
 div.resume-container {
-    max-width: 300px;
+    width: 301px;
     display: grid;
-    grid-template-rows: 400px min-content;
+    grid-template-rows: 438.5px min-content;
     border: 2px solid rgb(var(--border-color));
     border-radius: 10px;
 }
 
 div.resume-preview-small {
-    width: 300px;
+    z-index: 4;
     cursor: pointer;
+}
+
+div.resume-preview-small {
+    transform: scale(0.5);
+    width: 300px;
+    transform-origin: top left 10px;
+}
+
+div.resume-preview-small>div {
+    border-radius: 10px 10px 0 0;
+    opacity: 70%;
+    margin: 0;
+}
+
+div.resume-preview-small>div:hover, div.resume-preview-small>div:focus {
+    opacity: 90%;
 }
 
 div.resume-properties {
@@ -77,6 +93,7 @@ div.three-dot-container {
 }
 
 div.three-dot-container button {
+    cursor: pointer;
     border: none;
 }
 
@@ -87,6 +104,7 @@ div.three-dot-container button:hover {
 }
 
 dialog.dialog {
+    z-index: 5;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 45%;
@@ -128,7 +146,7 @@ div.resume-options {
     background-color: rgb(33, 33, 33);
     border-radius: 0.4em;
     position: absolute;
-    transform: translate(300%, 375%);
+    transform: translate(300%, 420%);
     animation: fade ease-in-out 0.25s;
 }
 

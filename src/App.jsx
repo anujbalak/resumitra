@@ -28,8 +28,8 @@ export default function App() {
   }
 
   function editResumeBtnHandler(e) {
+    currentResumeDetails = {id:e.currentTarget.id, title:e.currentTarget.dataset.title}
     setCurrentPage('edit-resume')
-    currentResumeDetails = {id:e.target.id, title:e.target.dataset.title}
   }
 
 

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 import threeDotsIcon from "/svg/three-dots.svg";
+import LiveResume from "./LiveResume";
 
 export default function RenderResume({
         name,
@@ -10,6 +11,7 @@ export default function RenderResume({
     }) {
     const [showOptions, setShowOptions] = useState(false);
 
+    const savedResume = JSON.parse(localStorage.getItem(id));
     function handleBtnClick(e) {
         e.stopPropagation();
         if (showOptions) {
@@ -30,7 +32,11 @@ export default function RenderResume({
             onClick={onEditResume} 
             data-title= {name} 
             id={id}
-        ></div>
+        >
+        {savedResume &&
+         <LiveResume resumeData={savedResume} />   
+        }
+        </div>
         <div className="resume-properties">
             <h2 className="resume-name">{name}</h2>
             <div className="three-dot-container">
