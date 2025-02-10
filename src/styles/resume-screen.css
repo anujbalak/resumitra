@@ -33,6 +33,15 @@ div.live-resume {
     font-size: 17px;
 }
 
+div.live-resume hr {
+    width: 95%;
+    color: rgb(var(--accent-color));
+}
+
+div.personal-details p.email, p.mobile {
+    text-decoration-color: rgb(var(--accent-color));
+}
+
 @media print {
     div.render-resume {
         margin: 0; 

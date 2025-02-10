@@ -97,10 +97,6 @@ div.education-details p.endDate, div.education-details p.startDate {
     flex: 10%;
 }
 
-div.live-resume hr {
-    width: 95%;
-}
-
 /* --------------experienc------------------- */
 
 p.post, p.company {
