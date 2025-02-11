@@ -9,6 +9,7 @@ import "./styles/left-sidebar.css"
 import "./styles/resume-screen.css"
 import "./styles/right-sidebar.css"
 import "./styles/resume.css"
+import "./styles/checkbox.css"
 
 // Supports weights 300-700
 import '@fontsource-variable/space-grotesk';

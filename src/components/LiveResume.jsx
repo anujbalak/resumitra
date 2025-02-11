@@ -1,6 +1,12 @@
 
-
-export default function LiveResume({resumeData, contentRef}) {
+export default function LiveResume({
+    resumeData, 
+    contentRef,
+    showProfile, 
+    showEducation, 
+    showExperience, 
+    showProjects,
+    }) {
     
     return (
         <div className="render-resume" ref={contentRef}>
@@ -24,15 +30,18 @@ export default function LiveResume({resumeData, contentRef}) {
                     {resumeData.personalDetails.linkedin && 
                         <a href={resumeData.personalDetails.linkedin}>Linkedin</a>
                     }
-                    <div className="profile-container">
-                        <h2 className="profile-label">
-                            Profile
-                        </h2>
-                        <p className="profile">
-                            {resumeData.personalDetails.profile}
-                        </p>
-                    </div>
+                    {showProfile &&
+                        <div className="profile-container">
+                            <h2 className="profile-label">
+                                Profile
+                            </h2>
+                            <p className="profile">
+                                {resumeData.personalDetails.profile}
+                            </p>
+                        </div>
+                    }
                 </div>
+                {showEducation &&
                 <div className="education-details">
                     <h2 className="education-label">Education</h2>
                     <hr />
@@ -101,6 +110,8 @@ export default function LiveResume({resumeData, contentRef}) {
                         </div>
                     }
                 </div>
+                }
+                {showExperience &&
                 <div className="experience">
                     <h2 className="experience-label">Experience</h2>
                     <hr />
@@ -176,6 +187,8 @@ export default function LiveResume({resumeData, contentRef}) {
                         </div>
                     }
                 </div>
+                }
+                {showProjects &&
                 <div className="projects">
                     <h2 className="projects-label">Projects</h2>
                     <hr />
@@ -208,6 +221,7 @@ export default function LiveResume({resumeData, contentRef}) {
                         </div>
                     }
                 </div>
+                }
             </div>
         </div>
     )

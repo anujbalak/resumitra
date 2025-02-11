@@ -17,6 +17,11 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
     const [showRightSidebar, setShowRightSidebar] = useState(true);
     const [showLeftSidebar, setShowLeftSidebar] = useState(true);
 
+    const [showProfile, setShowProfile] = useState(true)
+    const [showEducation, setShowEducation] = useState(true)
+    const [showExperience, setShowExperience] = useState(true)
+    const [showProjects, setShowProjects] = useState(true)
+
     const contentRef = useRef(null);
     const handlePrint = useReactToPrint({ contentRef }); 
 
@@ -83,11 +88,25 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
             </>
         
         }
-        <ResumeScreen resumeData={resumeData} contentRef={contentRef}/>
+        <ResumeScreen 
+            resumeData={resumeData} 
+            contentRef={contentRef}
+            showProfile={showProfile}
+            showEducation={showEducation}
+            showExperience={showExperience}
+            showProjects={showProjects}
+        />
         {showRightSidebar && 
             <RightSidebar 
-                setShowRightSidebar={setShowRightSidebar}
-                resumeData={resumeData}
+                setShowRightSidebar={setShowRightSidebar} 
+                showProfile={showProfile}
+                setShowProfile={setShowProfile}
+                showEducation={showEducation}
+                setShowEducation={setShowEducation}
+                showExperience={showExperience}
+                setShowExperience={setShowExperience}
+                showProjects={showProjects}
+                setShowProjects={setShowProjects}
             />}
         </>
     )

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ButtonWithIcon from "./ButtonWithIcon.jsx";
 import Preset from "./Preset.jsx";
 import collapseIcon from "/svg/collapse.svg"
@@ -26,7 +27,18 @@ const colors = [
     "114, 135, 253",
 ]
 
-export default function RightSidebar({ setShowRightSidebar, resumeData}) {
+export default function RightSidebar({ 
+    setShowRightSidebar, 
+    showProfile, 
+    setShowProfile,
+    showEducation, 
+    setShowEducation,
+    showExperience, 
+    setShowExperience,
+    showProjects, 
+    setShowProjects,
+    }) {
+
     function collapseBtnHandler() {
         setShowRightSidebar(false)
     }
@@ -58,6 +70,16 @@ export default function RightSidebar({ setShowRightSidebar, resumeData}) {
         })
         e.target.classList.add('selected')
     }
+
+    function toggleField(field, setField) {
+        if (!field) {
+            setField(true);
+        } else if (field) {
+            setField(false)
+        }
+    }
+
+
     return (
         <>
             <div className="right-sidebar">
@@ -96,6 +118,31 @@ export default function RightSidebar({ setShowRightSidebar, resumeData}) {
                             ></span>
                         )}
                     </div>
+                    <h3 className="hide-show-label">
+                        Hide/Show Fields
+                    </h3>
+                    <div className="hide-show">
+                        <Checkbox 
+                            label="Profile"
+                            checkEventHandler={() => toggleField(showProfile, setShowProfile, 'profile-container')}
+                            checked={showProfile}
+                        />
+                        <Checkbox 
+                            label="Education"
+                            checkEventHandler={() => toggleField(showEducation, setShowEducation, 'education-details')}
+                            checked={showEducation}
+                        />
+                        <Checkbox 
+                            label="Experience"
+                            checkEventHandler={() => toggleField(showExperience, setShowExperience, 'experience')}
+                            checked={showExperience}
+                        />
+                        <Checkbox 
+                            label="Projects"
+                            checkEventHandler={() => toggleField(showProjects, setShowProjects, 'projects')}
+                            checked={showProjects}
+                        />
+                    </div>
                 </div>
             </div>
         </>
@@ -106,7 +153,6 @@ export default function RightSidebar({ setShowRightSidebar, resumeData}) {
 function removeSelectedClass() {
     const presets = document.querySelectorAll('div.preset img')
     return presets.forEach((preset) => {
-        console.log(preset.className)
         preset.classList.remove('selected')
     })
 }
@@ -114,4 +160,23 @@ function removeSelectedClass() {
 function applyPreset(id) {
     const page = document.querySelector('div.live-resume')
     return page.id = id
+}
+
+function Checkbox({label, checkEventHandler, checked}) {
+    return (    	
+        <div className="pretty p-default  p-round p-smooth p-toggle">
+            <input 
+                type="checkbox" 
+                id="checkbox" 
+                onChange={checkEventHandler}
+                checked={checked}
+            />
+            <div className="state p-primary-o p-on">
+                <label htmlFor="checkbox">Hide {label}</label>
+            </div>
+            <div className="state p-primary-o p-off">
+                <label htmlFor="checkbox">Show {label}</label>
+            </div>
+        </div>
+    )
 }

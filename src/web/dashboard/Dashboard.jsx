@@ -121,7 +121,6 @@ function RenderResumes({
         deleteResumeHandler,
         onEditResume
     }) {
-        console.log(resumeList)
     return (
         resumeList.map((resume) => 
             <RenderResume 
