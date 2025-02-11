@@ -67,7 +67,7 @@ div.enter-details div.btn-container button img {
 }
 
 div.enter-details div.btn-container div.label-flyout {
-    transform: translate(300%, 0);
+    transform: translate(300%, 30px);
 }
 
 /* ------------------header-------------------- */
