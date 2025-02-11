@@ -159,7 +159,7 @@ div#preset2 div.personal-details p.mobile {
     margin-left: 20%;
 }
 
-div#preset2 div.personal-details a {
+div.personal-details a {
     color: rgb(var(--text-color));
     text-decoration: underline;
     text-decoration-color: rgb(var(--accent-color));

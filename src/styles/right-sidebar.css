@@ -29,6 +29,7 @@ div.right-sidebar-content {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    align-items: center;
 }
 
 div.right-sidebar-content h3 {
@@ -41,8 +42,9 @@ div.preset img {
     max-width: 281.81px;
 }
 
-div.preset img.selected {
-    padding: 2px;
+div.preset img.selected, span.color.selected {
+    transform-origin: center;
+    padding: 1px;
     border: 1px solid rgb(var(--white-color));
 }
 
@@ -51,7 +53,9 @@ div.colors {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.8em;
+    width: 80%;
+    max-width: 310px;
 }
 
 span.color {
