@@ -62,13 +62,19 @@ div.resume-preview-small {
     transform-origin: top left 10px;
 }
 
-div.resume-preview-small>div {
+div.resume-preview-small>div, img.preset-img-on-dashboard {
     border-radius: 10px 10px 0 0;
     opacity: 70%;
     margin: 0;
 }
 
-div.resume-preview-small>div:hover, div.resume-preview-small>div:focus {
+img.preset-img-on-dashboard {
+    border-radius: 15px 15px 0 0;
+    transform: scale(1.135);
+    transform-origin: top left 10px;
+}
+
+div.resume-preview-small>div:hover, div.resume-preview-small>div:focus, img.preset-img-on-dashboard:hover, img.preset-img-on-dashboard:focus {
     opacity: 90%;
 }
 
@@ -142,6 +148,7 @@ dialog.dialog form>div.button-container {
 }
 
 div.resume-options {
+    z-index: 5;
     padding: 0.8em 0.8em;
     background-color: rgb(33, 33, 33);
     border-radius: 0.4em;

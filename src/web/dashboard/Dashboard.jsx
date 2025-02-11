@@ -3,7 +3,6 @@ import Button from "../../components/Button.jsx";
 import Header from "../../components/Header.jsx";
 import RenderResume from "../../components/ResumeOnDashboard.jsx";
 
-let localResumes = []
 export default function Dashboard({onEditResume}) {
     const [newResume, setNewResume] = useState(false);
     const [resumeList, setResumeList] = useState([]);
@@ -14,7 +13,6 @@ export default function Dashboard({onEditResume}) {
         const savedResumes = JSON.parse(localStorage.getItem('resumeList'));
         if (savedResumes !== null && savedResumes.length > 0 && savedResumes) {
             setResumeList(...resumeList, savedResumes);
-            localResumes = savedResumes;
         }
         setIsLoaded(true);
     }
@@ -55,23 +53,23 @@ function Resumes(
         e.preventDefault()
         setNewResume(false);
 
-        localResumes.push({name: e.target.childNodes[0].childNodes[1].value, id:crypto.randomUUID()})
+        const resume = {name: e.target.childNodes[0].childNodes[1].value, id:crypto.randomUUID()}
 
-        setResumeList([...resumeList, {name: e.target.childNodes[0].childNodes[1].value, id:crypto.randomUUID()}]);
+        setResumeList([...resumeList, resume]);
 
-        saveInLocalStorage(localResumes);
+        saveInLocalStorage([...resumeList, resume]);
     }
 
     function deleteResumeHandler(e) {
         setDeletedResumeId(e.target.id);
-        localResumes.forEach(resume => {
-            if(resume.id == deletedResumeId) {
-                const DELETED_RESUME_INDEX = localResumes.indexOf(resume);
-                return localResumes.splice(DELETED_RESUME_INDEX, 1);
-            }
-        })
+        // localResumes.forEach(resume => {
+        //     if(resume.id == deletedResumeId) {
+        //         const DELETED_RESUME_INDEX = localResumes.indexOf(resume);
+        //         return localResumes.splice(DELETED_RESUME_INDEX, 1);
+        //     }
+        // })
         setResumeList(resumeList.filter(resume => resume.id !== deletedResumeId));
-        saveInLocalStorage(localResumes)
+        saveInLocalStorage(resumeList)
     }
 
     return (
@@ -123,6 +121,7 @@ function RenderResumes({
         deleteResumeHandler,
         onEditResume
     }) {
+        console.log(resumeList)
     return (
         resumeList.map((resume) => 
             <RenderResume 

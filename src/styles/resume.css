@@ -187,7 +187,7 @@ div#preset2 div.personal-details p.profile, div#preset2 p.details,  div#preset2 
 div#preset2 div.education-details, div#preset2 div.experience, div#preset2 div.projects {
     display: grid;
     grid-template-columns: 20% 1fr;
-    grid-template-rows: min-content 1fr 1fr 1fr;
+    grid-template-rows: min-content;
     row-gap: 0.5em;
     margin-bottom: 1em;
 }

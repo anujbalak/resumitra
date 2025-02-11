@@ -2,6 +2,7 @@
 import { useState } from "react";
 import threeDotsIcon from "/svg/three-dots.svg";
 import LiveResume from "./LiveResume";
+import preset from "/templates/template_1.png"
 
 export default function RenderResume({
         name,
@@ -33,8 +34,9 @@ export default function RenderResume({
             data-title= {name} 
             id={id}
         >
-        {savedResume &&
-         <LiveResume resumeData={savedResume} />   
+        {savedResume ?
+         <LiveResume resumeData={savedResume} /> :
+         <img src={preset} alt="" className="preset-img-on-dashboard" />   
         }
         </div>
         <div className="resume-properties">
