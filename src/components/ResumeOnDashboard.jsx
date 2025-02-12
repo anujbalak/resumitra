@@ -35,7 +35,13 @@ export default function RenderResume({
             id={id}
         >
         {savedResume ?
-         <LiveResume resumeData={savedResume} /> :
+         <LiveResume 
+            resumeData={savedResume} 
+            showProfile={true}
+            showEducation={true}
+            showExperience={true}
+            showProjects={true}
+        /> :
          <img src={preset} alt="" className="preset-img-on-dashboard" />   
         }
         </div>
