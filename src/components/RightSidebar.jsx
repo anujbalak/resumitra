@@ -5,6 +5,7 @@ import collapseIcon from "/svg/collapse.svg"
 
 import preset1Img from "/templates/template_1.png"
 import preset2Img from "/templates/template_2.png"
+import preset3Img from "/templates/template_3.png"
 
 const colors = [
     '133, 0, 245', 
@@ -57,11 +58,16 @@ export default function RightSidebar({
                 removeSelectedClass()
                 e.target.classList.add('selected');       
                 break;
+            case "preset3":
+                applyPreset("preset3")
+                removeSelectedClass()
+                e.target.classList.add('selected');       
+                break;
             default:
                 break;
         }
     }
-
+    
     function changeAccentColor(e) {
         document.body.style.setProperty('--accent-color', e.target.id)
         const colors = document.querySelectorAll('span.color');
@@ -69,6 +75,7 @@ export default function RightSidebar({
             color.classList.remove('selected');
         })
         e.target.classList.add('selected')
+        console.log(document.body.style.getPropertyValue('--accent-color'))
     }
 
     function toggleField(field, setField) {
@@ -99,6 +106,11 @@ export default function RightSidebar({
                         <Preset
                             img={preset2Img}
                             id="preset2"
+                            clickHandler={clickHandler}
+                        />
+                        <Preset
+                            img={preset3Img}
+                            id="preset3"
                             clickHandler={clickHandler}
                         />
                     </div>

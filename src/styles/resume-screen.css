@@ -27,7 +27,8 @@ div.live-resume p {
 }
 
 div.live-resume {
-    margin: 1em 2em;
+    height: 100%;
+    padding: 1em 2em;
     /* font-family: 'Dosis Variable', sans-serif; */
     font-family: 'Space Grotesk Variable', sans-serif;
     font-size: 17px;
@@ -43,8 +44,17 @@ div.personal-details p.email, p.mobile {
 }
 
 @media print {
-    div.render-resume {
-        margin: 0; 
+    /* div#preset3 div.personal-details h2.profile-label, div#preset3 div.education-details h2, div#preset3 div.experience h2, div#preset3 div.projects h2 {
+        color: white;
+    } */
+     :root {
+        --accent-color: 230, 230, 230;
+     }
+    div#preset3 {
+        border-left: 0;
+    }
+    div.live-resume hr {
+        background-color: rgb(var(--accent-color));
     }
 }
 

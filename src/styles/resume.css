@@ -241,3 +241,130 @@ div#preset2 div.experience div p.post, div#preset2 div.experience div p.company 
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+
+
+
+
+
+
+
+
+
+/* --------------------preset3---------------------------- */
+div#preset3 {
+    background: linear-gradient(90deg, black 21.5%, white 0);
+}
+div.render-resume {
+    scrollbar-width: none;
+    box-shadow: 0 0 10px white;
+}
+
+div.live-resume h1, div.live-resume h2 {
+    margin: 0;
+}
+
+div#preset3 div.personal-details h1.name {
+    font-size: 2.5rem;
+    flex: 100%;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-left: 20%;;
+}
+
+div#preset3 div.personal-details {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+div#preset3 div.personal-details p.email {
+    margin-left: 20%;
+}
+
+div#preset3 div.personal-details p.mobile {
+    text-align: left;
+    flex: 0 5 100%;
+    margin-left: 20%;
+}
+
+div#preset3 div.personal-details a:first-of-type {
+    margin-left: 20%;
+}
+
+div#preset3 div.personal-details div.profile-container {
+    display: grid;
+    margin-top: 0.5em;
+    grid-template-columns: 20% 1fr;
+}
+
+div#preset3 div.personal-details h2.profile-label {
+    color: rgb(var(--accent-color));
+    font-size: 1.2rem;
+}
+
+div#preset3 div.personal-details p.profile, div#preset3 p.details,  div#preset3 p.location {
+    text-align: left;
+    flex: 100%;
+    font-size: 0.9rem;
+}
+
+div#preset3 div.education-details, div#preset3 div.experience, div#preset3 div.projects {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: min-content;
+    row-gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+div#preset3 div.education-details h2, div#preset3 div.experience h2, div#preset3 div.projects h2 {
+    color: rgb(var(--accent-color));
+    font-size: 1.2rem;
+    grid-row: 2 / 5;
+}
+
+div#preset3 div.education-details hr, div#preset3 div.experience hr, div#preset3 div.projects hr {
+    grid-column: 2 / 3;
+}
+
+div#preset3 div.education-details div, div#preset3 div.experience div, div#preset3 div.projects div {
+    justify-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    width: 100%;
+    align-items: center;
+    row-gap: 0;
+}
+
+div#preset3 div.education-details div p.name, div#preset3 div.projects div p.name {
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex: 70%;
+}
+
+div#preset3 p.startDate, div#preset3 p.endDate {
+    font-size: 0.9rem;
+}
+
+div#preset3 div.education-details p.startDate, div#preset3 div.education-details p.endDate {
+    flex: 10%;
+}
+
+div#preset3 div.education-details p.endDate {
+    text-align: start;
+}
+
+div#preset3 div.education-details p.course,div#preset3 div.education-details div p.score {
+    flex: 100%;
+    text-align: start;
+}
+
+div#preset3 div.experience div p.post, div#preset3 div.experience div p.company {
+    flex: 100%;
+    text-align: start;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
