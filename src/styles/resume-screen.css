@@ -15,6 +15,7 @@ div.render-resume {
     /* 2408px */
     width: 8.3in;
     height: 11.7in;
+    /* max-height: calc(100vh - 50px); */
     /* 3508px */
     box-shadow: 0 0 1em rgb(var(--pure-black));
     color: black;

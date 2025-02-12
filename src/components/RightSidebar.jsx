@@ -6,6 +6,7 @@ import collapseIcon from "/svg/collapse.svg"
 import preset1Img from "/templates/template_1.png"
 import preset2Img from "/templates/template_2.png"
 import preset3Img from "/templates/template_3.png"
+import Button from "./Button.jsx";
 
 const colors = [
     '133, 0, 245', 
@@ -38,6 +39,7 @@ export default function RightSidebar({
     setShowExperience,
     showProjects, 
     setShowProjects,
+    handlePrint,
     }) {
 
     function collapseBtnHandler() {
@@ -153,6 +155,12 @@ export default function RightSidebar({
                             label="Projects"
                             checkEventHandler={() => toggleField(showProjects, setShowProjects, 'projects')}
                             checked={showProjects}
+                        />
+                    </div>
+                    <div className="print-container">
+                        <Button
+                            name="Print"
+                            btnEventHandler={handlePrint}
                         />
                     </div>
                 </div>

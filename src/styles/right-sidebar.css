@@ -82,6 +82,21 @@ div.hide-show {
     gap: 1em;
 }
 
+div.print-container {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    max-width: 310px;
+}
+
+div.print-container div {
+    width: 100%;
+}
+
+div.print-container div button {
+    width: 100%;
+}
+
 @media only screen and (min-width: 2000px) {
     div.enter-details {
         left: calc(30% - 20em);

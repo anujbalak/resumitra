@@ -4,7 +4,7 @@ div.enter-details, div.right-sidebar {
     display: grid;
     grid-template-rows: 2em 1fr;
     width: calc(15% + 12em);
-    height: calc(100% - 50px);
+    height: calc(11.7in - 50px);
     overflow: auto;
 }
 

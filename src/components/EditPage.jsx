@@ -107,6 +107,7 @@ export default function EditPage({resumeDetails, backBtnHandler}) {
                 setShowExperience={setShowExperience}
                 showProjects={showProjects}
                 setShowProjects={setShowProjects}
+                handlePrint={handlePrint}
             />}
         </>
     )
