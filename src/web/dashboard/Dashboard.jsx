@@ -69,7 +69,8 @@ function Resumes(
         //     }
         // })
         setResumeList(resumeList.filter(resume => resume.id !== deletedResumeId));
-        saveInLocalStorage(resumeList)
+        saveInLocalStorage(resumeList.filter(resume => resume.id !== deletedResumeId))
+        localStorage.removeItem(e.target.id);
     }
 
     return (
