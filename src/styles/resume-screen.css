@@ -37,25 +37,17 @@ div.live-resume {
 
 div.live-resume hr {
     width: 95%;
-    color: rgb(var(--accent-color));
 }
-
-div.personal-details p.email, p.mobile {
-    text-decoration-color: rgb(var(--accent-color));
+#preset3 hr, #preset2 hr {
+    width: 100%;
 }
 
 @media print {
     /* div#preset3 div.personal-details h2.profile-label, div#preset3 div.education-details h2, div#preset3 div.experience h2, div#preset3 div.projects h2 {
         color: white;
     } */
-     :root {
-        --accent-color: 230, 230, 230;
-     }
     div#preset3 {
         border-left: 0;
-    }
-    div.live-resume hr {
-        background-color: rgb(var(--accent-color));
     }
 }
 

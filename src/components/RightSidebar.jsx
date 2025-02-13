@@ -9,24 +9,29 @@ import preset3Img from "/templates/template_3.png"
 import Button from "./Button.jsx";
 
 const colors = [
-    '133, 0, 245', 
-    "30, 30, 30", 
-    "209, 69, 102", 
-    '13, 159, 201', 
-    '210, 194, 12', 
-    "2, 104, 0", 
-    "37, 40, 152", 
-    "102, 198, 161", 
-    "102, 51, 153", 
-    "214, 152, 46", 
-    "217, 74, 56", 
-    "156, 29, 147", 
-    "47, 47, 190", 
-    "234, 118, 203", 
-    "210, 15, 57",
-    "254, 100, 11",
-    "23, 146, 153",
-    "114, 135, 253",
+    "crimson", 
+    "fireBrick", 
+    "hotPink", 
+    'paleVioletRed', 
+    'tomato', 
+    "orangeRed", 
+    "darkOrange", 
+    "darkKhaki", 
+    "magenta", 
+    "mediumPurple", 
+    "blueViolet", 
+    "indigo", 
+    "darkSlateBlue", 
+    "seaGreen", 
+    "oliveDrab",
+    "teal",
+    "steelBlue",
+    "dodgerBlue",
+    "mediumSlateBlue",
+    "navy",
+    "dimGray",
+    "slateGray",
+    "ghostWhite",
 ]
 
 export default function RightSidebar({ 
@@ -41,6 +46,8 @@ export default function RightSidebar({
     setShowProjects,
     handlePrint,
     }) {
+    
+    const [currentAccent, setCurrentAccent] = useState('ghostWhite');
 
     function collapseBtnHandler() {
         setShowRightSidebar(false)
@@ -64,6 +71,7 @@ export default function RightSidebar({
                 applyPreset("preset3")
                 removeSelectedClass()
                 e.target.classList.add('selected');       
+                applyAccentOnTexts(currentAccent);
                 break;
             default:
                 break;
@@ -71,13 +79,29 @@ export default function RightSidebar({
     }
     
     function changeAccentColor(e) {
-        document.body.style.setProperty('--accent-color', e.target.id)
+        setCurrentAccent(e.target.id);
+        const hrs = document.querySelectorAll('div.live-resume hr')
+        hrs.forEach(hr => {
+            hr.style.color = e.target.id
+        })
+
+        const textElements = document.querySelectorAll('#preset3 h2')
+        if (textElements) {
+            textElements.forEach(element => {
+                element.style.color = e.target.id
+            })
+        }
+
+        const links = document.querySelectorAll('.live-resume a')
+        links.forEach(link => {
+            link.style.textDecorationColor = e.target.id
+        })
+
         const colors = document.querySelectorAll('span.color');
         colors.forEach(color => {
             color.classList.remove('selected');
         })
         e.target.classList.add('selected')
-        console.log(document.body.style.getPropertyValue('--accent-color'))
     }
 
     function toggleField(field, setField) {
@@ -124,7 +148,7 @@ export default function RightSidebar({
                                 className="color"
                                 id={color}
                                 style={{
-                                    backgroundColor: `rgb(${color})`, 
+                                    backgroundColor: color, 
                                     width: "1.4em", 
                                     height: "1.4em"
                                 }}
@@ -199,4 +223,11 @@ function Checkbox({label, checkEventHandler, checked}) {
             </div>
         </div>
     )
+}
+
+function applyAccentOnTexts(accentColor) {
+    const textElements = document.querySelectorAll('#preset3 h2')
+    textElements.forEach(element => {
+        element.style.color = accentColor
+    })
 }
