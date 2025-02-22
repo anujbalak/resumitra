@@ -1,32 +1,31 @@
 button.btn-with-icon img {
-    width: 24px;
+  width: 24px;
 }
 
 :root {
-    --pure-black: 0, 0, 0;
-    --white-color: 238, 238, 238;
-    --black-color: 17, 17, 17;
+  --pure-black: 0, 0, 0;
+  --white-color: 238, 238, 238;
+  --black-color: 17, 17, 17;
 
-    --button-text: 238, 238, 238;
+  --button-text: 238, 238, 238;
 }
 
 div.edit-resume-page {
-    display: grid;
-    background-color: rgb(var(--pure-black));
-    min-height: 100vh;
-    grid-template-columns: 50px 1fr ;
-    grid-template-rows: 50px 1fr;
+  display: grid;
+  background-color: rgb(var(--pure-black));
+  min-height: 100vh;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 50px 1fr;
 }
 
 div.edit-resume-page header.header {
-    grid-column: 2 / 3;
-    gap: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+  grid-column: 2 / 3;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
-
 div.edit-resume-page header.header p {
-    grid-column: 2/ 3;
+  grid-column: 2/ 3;
 }

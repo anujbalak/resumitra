@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prettier": "prettier /src --write"
+    "prettier": "prettier src/ --write"
   },
   "dependencies": {
     "@fontsource-variable/dosis": "^5.1.1",

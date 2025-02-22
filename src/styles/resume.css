@@ -1,510 +1,534 @@
-
 /* ------------------------preset1------------------- */
 div#preset1 div.personal-details {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  justify-content: center;
 }
 
 div#preset1 div.personal-details h1.name {
-    font-size: 2.5em;
-    margin: 0;
-    margin-top: 0.5em;
-    flex: 1 1 100%;
+  font-size: 2.5em;
+  margin: 0;
+  margin-top: 0.5em;
+  flex: 1 1 100%;
 }
 
 div#preset1 div.personal-details p {
-    margin: 0;
+  margin: 0;
 }
 
 div#preset1 div.personal-details p.email {
-    flex: 1 1 55%;
-    text-align: right;
+  flex: 1 1 55%;
+  text-align: right;
 }
 
 div#preset1 div.personal-details p.mobile {
-    flex: 0 1 40%;
-    text-align: left;
+  flex: 0 1 40%;
+  text-align: left;
 }
 
 div#preset1 div.personal-details a {
-    color: rgb(var(--text-color));
-    text-decoration-line: underline;
+  color: rgb(var(--text-color));
+  text-decoration-line: underline;
 }
 
-div#preset1  div.profile-container {
-    flex: 1 0 100%;
-    display: grid;
-    /* grid-template-columns: 20% 1fr; */
+div#preset1 div.profile-container {
+  flex: 1 0 100%;
+  display: grid;
+  /* grid-template-columns: 20% 1fr; */
 }
 
 div#preset1 p.profile {
-    text-align: left;
-    margin: 0 1em;
-    font-size: 0.9rem;
+  text-align: left;
+  margin: 0 1em;
+  font-size: 0.9rem;
 }
 
 /* --------------------education---------------------------- */
-div#preset1 div.education-details,div#preset1 div.experience,div#preset1 div.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+div#preset1 div.education-details,
+div#preset1 div.experience,
+div#preset1 div.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-div#preset1 div.education-details div + div, div#preset1 div.experience div + div,div#preset1 div.projects div + div {
-    margin-top: 0.6em;
+div#preset1 div.education-details div + div,
+div#preset1 div.experience div + div,
+div#preset1 div.projects div + div {
+  margin-top: 0.6em;
 }
 
-div#preset1 h2.education-label,div#preset1 h2.experience-label, div#preset1 h2.projects-label, div#preset1 h2.profile-label {
-    margin: 0.3em auto 0.2em auto;
-    font-size: 1.2rem;
-} 
-
-div#preset1 div.education-details > div, div#preset1 div.experience > div, div#preset1 div.projects > div {
-    text-align: left;
-    margin-left: calc(1em);
-    flex: 1 1 100%;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    margin-right: 1em;
+div#preset1 h2.education-label,
+div#preset1 h2.experience-label,
+div#preset1 h2.projects-label,
+div#preset1 h2.profile-label {
+  margin: 0.3em auto 0.2em auto;
+  font-size: 1.2rem;
 }
 
-div#preset1 div.education-details p.name{
-    font-weight: 700;
-    font-size: 1rem;
-    flex: 70%;
+div#preset1 div.education-details > div,
+div#preset1 div.experience > div,
+div#preset1 div.projects > div {
+  text-align: left;
+  margin-left: calc(1em);
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  margin-right: 1em;
+}
+
+div#preset1 div.education-details p.name {
+  font-weight: 700;
+  font-size: 1rem;
+  flex: 70%;
 }
 
 p.startDate::after {
-    margin-left: 0.5em;
-    content: '-';
+  margin-left: 0.5em;
+  content: "-";
 }
 
-div#preset1 div.education-details p.endDate, div#preset1 div.education-details p.startDate {
-    flex: 10%;
+div#preset1 div.education-details p.endDate,
+div#preset1 div.education-details p.startDate {
+  flex: 10%;
 }
 
 /* --------------experienc------------------- */
 
-div#preset1 p.post, div#preset1 p.company {
-    font-weight: 700;
-    font-size: 1rem;
-    flex: 100%;
+div#preset1 p.post,
+div#preset1 p.company {
+  font-weight: 700;
+  font-size: 1rem;
+  flex: 100%;
 }
 
 div#preset1 div.experience div p.location {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
-div#preset1 p.location, div#preset1 p.startDate, div#preset1 p.endDate {
-    opacity: 80%;
-    font-size: 0.9rem;
+div#preset1 p.location,
+div#preset1 p.startDate,
+div#preset1 p.endDate {
+  opacity: 80%;
+  font-size: 0.9rem;
 }
 
 div#preset1 p.details {
-    flex: 100%;
-    font-size: 0.85rem;
+  flex: 100%;
+  font-size: 0.85rem;
 }
-
 
 /* ----------------projects------------------ */
 div#preset1 div.projects div p.name {
-    font-size: 1rem;
-    font-weight: 700;
-    flex: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  flex: 100%;
 }
 
 div#preset1 div.projects div p.details {
-    flex: 100%;
+  flex: 100%;
 }
 
-
-
-
-
-
-
-
-
-
 /* ----------------------preset2------------------------ */
-div.live-resume h1, div.live-resume h2 {
-    margin: 0;
+div.live-resume h1,
+div.live-resume h2 {
+  margin: 0;
 }
 
 div#preset2 div.personal-details h1.name {
-    font-size: 2.5rem;
-    flex: 100%;
-    text-align: left;
-    margin-top: 0.5em;
-    margin-left: 20%;;
+  font-size: 2.5rem;
+  flex: 100%;
+  text-align: left;
+  margin-top: 0.5em;
+  margin-left: 20%;
 }
 
 div#preset2 div.personal-details {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  margin-bottom: 1em;
 }
 
 div#preset2 div.personal-details p.email {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 div#preset2 div.personal-details p.mobile {
-    text-align: left;
-    flex: 0 5 100%;
-    margin-left: 20%;
+  text-align: left;
+  flex: 0 5 100%;
+  margin-left: 20%;
 }
 
 div.personal-details a {
-    color: rgb(var(--text-color));
-    text-decoration: underline;
+  color: rgb(var(--text-color));
+  text-decoration: underline;
 }
 div#preset2 div.personal-details a:first-of-type {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 div#preset2 h2.profile-label {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
-div#preset2 p.profile, div#preset2 p.details,  div#preset2 p.location {
-    text-align: left;
-    flex: 100%;
-    font-size: 0.9rem;
+div#preset2 p.profile,
+div#preset2 p.details,
+div#preset2 p.location {
+  text-align: left;
+  flex: 100%;
+  font-size: 0.9rem;
 }
 
-div#preset2 div.profile-container, div#preset2 div.profile-container, div#preset2 div.education-details, div#preset2 div.experience, div#preset2 div.projects {
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    grid-template-rows: min-content;
-    row-gap: 0.5em;
-    margin-bottom: 1em;
+div#preset2 div.profile-container,
+div#preset2 div.profile-container,
+div#preset2 div.education-details,
+div#preset2 div.experience,
+div#preset2 div.projects {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: min-content;
+  row-gap: 0.5em;
+  margin-bottom: 1em;
 }
 
-div#preset2 div.education-details h2, div#preset2 div.experience h2, div#preset2 div.projects h2 {
-    font-size: 1.2rem;
-    grid-row: 2 / 5;
+div#preset2 div.education-details h2,
+div#preset2 div.experience h2,
+div#preset2 div.projects h2 {
+  font-size: 1.2rem;
+  grid-row: 2 / 5;
 }
 
-div#preset2 div.education-details hr, div#preset2 div.experience hr, div#preset2 div.projects hr {
-    grid-column: 2 / 3;
+div#preset2 div.education-details hr,
+div#preset2 div.experience hr,
+div#preset2 div.projects hr {
+  grid-column: 2 / 3;
 }
 
-div#preset2 div.education-details div, div#preset2 div.experience div, div#preset2 div.projects div {
-    justify-self: start;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    width: 100%;
-    align-items: center;
-    row-gap: 0;
+div#preset2 div.education-details div,
+div#preset2 div.experience div,
+div#preset2 div.projects div {
+  justify-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  width: 100%;
+  align-items: center;
+  row-gap: 0;
 }
 
-div#preset2 div.education-details div p.name, div#preset2 div.projects div p.name {
-    text-align: start;
-    font-size: 1.1rem;
-    font-weight: 500;
-    flex: 70%;
+div#preset2 div.education-details div p.name,
+div#preset2 div.projects div p.name {
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 70%;
 }
 
-div#preset2 p.startDate, div#preset2 p.endDate {
-    font-size: 0.9rem;
+div#preset2 p.startDate,
+div#preset2 p.endDate {
+  font-size: 0.9rem;
 }
 
-div#preset2 div.education-details p.startDate, div#preset2 div.education-details p.endDate {
-    flex: 10%;
+div#preset2 div.education-details p.startDate,
+div#preset2 div.education-details p.endDate {
+  flex: 10%;
 }
 
 div#preset2 div.education-details p.endDate {
-    text-align: start;
+  text-align: start;
 }
 
-div#preset2 div.education-details p.course,div#preset2 div.education-details div p.score {
-    flex: 100%;
-    text-align: start;
+div#preset2 div.education-details p.course,
+div#preset2 div.education-details div p.score {
+  flex: 100%;
+  text-align: start;
 }
 
-div#preset2 div.experience div p.post, div#preset2 div.experience div p.company {
-    flex: 100%;
-    text-align: start;
-    font-size: 1.1rem;
-    font-weight: 500;
+div#preset2 div.experience div p.post,
+div#preset2 div.experience div p.company {
+  flex: 100%;
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
 
 /* --------------------preset3---------------------------- */
 div#preset3 {
-    background: linear-gradient(90deg, black 21.5%, white 0);
+  background: linear-gradient(90deg, black 21.5%, white 0);
 }
 div.render-resume {
-    scrollbar-width: none;
-    box-shadow: 0 0 10px white;
+  scrollbar-width: none;
+  box-shadow: 0 0 10px white;
 }
 
-div.live-resume h1, div.live-resume h2 {
-    margin: 0;
+div.live-resume h1,
+div.live-resume h2 {
+  margin: 0;
 }
 
 div#preset3 div.personal-details h1.name {
-    font-size: 2.5rem;
-    flex: 100%;
-    text-align: left;
-    margin-top: 0.5em;
-    margin-left: 20%;;
+  font-size: 2.5rem;
+  flex: 100%;
+  text-align: left;
+  margin-top: 0.5em;
+  margin-left: 20%;
 }
 
 div#preset3 div.personal-details {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  margin-bottom: 1em;
 }
 
 div#preset3 div.personal-details p.email {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 div#preset3 div.personal-details p.mobile {
-    text-align: left;
-    flex: 0 5 100%;
-    margin-left: 20%;
+  text-align: left;
+  flex: 0 5 100%;
+  margin-left: 20%;
 }
 
 div#preset3 div.personal-details a:first-of-type {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 div#preset3 h2.profile-label {
-    color: rgb(var(--accent-color));
-    font-size: 1.2rem;
+  color: rgb(var(--accent-color));
+  font-size: 1.2rem;
 }
 
-div#preset3 p.profile, div#preset3 p.details,  div#preset3 p.location {
-    text-align: left;
-    flex: 100%;
-    font-size: 0.9rem;
+div#preset3 p.profile,
+div#preset3 p.details,
+div#preset3 p.location {
+  text-align: left;
+  flex: 100%;
+  font-size: 0.9rem;
 }
 
-div#preset3 div.profile-container, div#preset3 div.education-details, div#preset3 div.experience, div#preset3 div.projects {
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    grid-template-rows: min-content;
-    row-gap: 0.5em;
-    margin-bottom: 1em;
+div#preset3 div.profile-container,
+div#preset3 div.education-details,
+div#preset3 div.experience,
+div#preset3 div.projects {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: min-content;
+  row-gap: 0.5em;
+  margin-bottom: 1em;
 }
 
-div#preset3 div.education-details h2, div#preset3 div.experience h2, div#preset3 div.projects h2 {
-    color: rgb(var(--accent-color));
-    font-size: 1.2rem;
-    grid-row: 2 / 5;
+div#preset3 div.education-details h2,
+div#preset3 div.experience h2,
+div#preset3 div.projects h2 {
+  color: rgb(var(--accent-color));
+  font-size: 1.2rem;
+  grid-row: 2 / 5;
 }
 
-div#preset3 div.education-details hr, div#preset3 div.experience hr, div#preset3 div.projects hr {
-    grid-column: 2 / 3;
+div#preset3 div.education-details hr,
+div#preset3 div.experience hr,
+div#preset3 div.projects hr {
+  grid-column: 2 / 3;
 }
 
-div#preset3 div.education-details div, div#preset3 div.experience div, div#preset3 div.projects div {
-    justify-self: start;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    width: 100%;
-    align-items: center;
-    row-gap: 0;
+div#preset3 div.education-details div,
+div#preset3 div.experience div,
+div#preset3 div.projects div {
+  justify-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  width: 100%;
+  align-items: center;
+  row-gap: 0;
 }
 
-div#preset3 div.education-details div p.name, div#preset3 div.projects div p.name {
-    text-align: start;
-    font-size: 1.1rem;
-    font-weight: 500;
-    flex: 70%;
+div#preset3 div.education-details div p.name,
+div#preset3 div.projects div p.name {
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 70%;
 }
 
-div#preset3 p.startDate, div#preset3 p.endDate {
-    font-size: 0.9rem;
+div#preset3 p.startDate,
+div#preset3 p.endDate {
+  font-size: 0.9rem;
 }
 
-div#preset3 div.education-details p.startDate, div#preset3 div.education-details p.endDate {
-    flex: 10%;
+div#preset3 div.education-details p.startDate,
+div#preset3 div.education-details p.endDate {
+  flex: 10%;
 }
 
 div#preset3 div.education-details p.endDate {
-    text-align: start;
+  text-align: start;
 }
 
-div#preset3 div.education-details p.course,div#preset3 div.education-details div p.score {
-    flex: 100%;
-    text-align: start;
+div#preset3 div.education-details p.course,
+div#preset3 div.education-details div p.score {
+  flex: 100%;
+  text-align: start;
 }
 
-div#preset3 div.experience div p.post, div#preset3 div.experience div p.company {
-    flex: 100%;
-    text-align: start;
-    font-size: 1.1rem;
-    font-weight: 500;
+div#preset3 div.experience div p.post,
+div#preset3 div.experience div p.company {
+  flex: 100%;
+  text-align: start;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* -----------------------preset4------------------------- */
 #preset4 hr {
-    display: none;
+  display: none;
 }
 #preset4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% min-content;
-    column-gap: 1em;
-    align-items: start;
-    flex-wrap: wrap;
-    justify-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% min-content;
+  column-gap: 1em;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-items: flex-start;
 }
 
 div#preset4 div.personal-details {
-    flex: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
-    grid-column: 1/ 3;
+  flex: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  grid-column: 1/ 3;
 }
 
- div#preset4 div.personal-details .name {
-    font-size: 2.5em;
-    margin: 0;
-    margin-top: 1em;
-    text-align: left;
+div#preset4 div.personal-details .name {
+  font-size: 2.5em;
+  margin: 0;
+  margin-top: 1em;
+  text-align: left;
 }
 
-div#preset4 .personal-details .email, div#preset4 .personal-details .mobile {
-    text-align: left;
-    flex: 100%;
+div#preset4 .personal-details .email,
+div#preset4 .personal-details .mobile {
+  text-align: left;
+  flex: 100%;
 }
 
 div#preset4 div.profile-container {
-    max-height: min-content;
+  max-height: min-content;
 }
 
 div#preset4 div.personal-details a {
-    color: rgb(var(--text-color));
-    text-decoration-line: underline;
+  color: rgb(var(--text-color));
+  text-decoration-line: underline;
 }
 
 div#preset4 .profile-label {
-    justify-self: left;
+  justify-self: left;
 }
 
-div#preset4  p.profile {
-    text-align: left;
-    font-size: 0.9rem;
+div#preset4 p.profile {
+  text-align: left;
+  font-size: 0.9rem;
 }
-
 
 /* --------------------education---------------------------- */
 
-
-div#preset4 div.profile-container, div#preset4 div.education-details,div#preset4 div.experience,div#preset4 div.projects {
-    flex: 0 0 48%;
-    max-height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
+div#preset4 div.profile-container,
+div#preset4 div.education-details,
+div#preset4 div.experience,
+div#preset4 div.projects {
+  flex: 0 0 48%;
+  max-height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-div#preset4 div.education-details div + div, div#preset4 div.experience div + div,div#preset4 div.projects div + div {
-    margin-top: 0.6em;
+div#preset4 div.education-details div + div,
+div#preset4 div.experience div + div,
+div#preset4 div.projects div + div {
+  margin-top: 0.6em;
 }
 
+div#preset4 .education-label,
+div#preset4 h2.experience-label,
+div#preset4 h2.projects-label,
+div#preset4 h2.profile-label {
+  flex: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+}
 
-div#preset4 .education-label, div#preset4 h2.experience-label, div#preset4 h2.projects-label, div#preset4 h2.profile-label {
-    flex: 100%;
-    text-align: left;
-    font-size: 1.2rem;
-} 
-
-
-div#preset4 div.education-details > div, div#preset4 div.experience > div, div#preset4 div.projects > div {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.5em;
+div#preset4 div.education-details > div,
+div#preset4 div.experience > div,
+div#preset4 div.projects > div {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
 }
 
 div#preset4 div.education-details {
-    order: 2;
+  order: 2;
 }
 
-div#preset4 div.education-details p.name{
-    font-weight: 700;
-    font-size: 1.1rem;
-    flex: 100%;
+div#preset4 div.education-details p.name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex: 100%;
 }
 
-#preset4 .course, #preset4 .score {
-    flex: 100%;
+#preset4 .course,
+#preset4 .score {
+  flex: 100%;
 }
 
 /* --------------experience------------------- */
 
-div#preset4 p.post, div#preset4 p.company {
-    font-weight: 700;
-    font-size: 1rem;
-    flex: 100%;
+div#preset4 p.post,
+div#preset4 p.company {
+  font-weight: 700;
+  font-size: 1rem;
+  flex: 100%;
 }
-
 
 div#preset4 div.experience {
-    order: 1;
+  order: 1;
 }
-
 
 div#preset4 div.experience div p.location {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
-
-div#preset4 p.location, div#preset4 p.startDate, div#preset4 p.endDate {
-    opacity: 80%;
-    font-size: 0.9rem;
+div#preset4 p.location,
+div#preset4 p.startDate,
+div#preset4 p.endDate {
+  opacity: 80%;
+  font-size: 0.9rem;
 }
 
 div#preset4 p.details {
-    flex: 100%;
-    font-size: 0.85rem;
+  flex: 100%;
+  font-size: 0.85rem;
 }
-
 
 /* ----------------projects------------------ */
 
 div#preset4 div.projects {
-    order: 3;
+  order: 3;
 }
 
-
 div#preset4 div.projects div p.name {
-    font-size: 1rem;
-    font-weight: 700;
-    flex: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  flex: 100%;
 }
 
 div#preset4 div.projects div p.details {
-    flex: 100%;
+  flex: 100%;
 }
