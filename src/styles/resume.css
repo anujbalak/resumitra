@@ -167,12 +167,6 @@ div#preset2 div.personal-details a:first-of-type {
     margin-left: 20%;
 }
 
-div#preset2 div.profile-container {
-    display: grid;
-    margin-top: 0.5em;
-    grid-template-columns: 20% 1fr;
-}
-
 div#preset2 h2.profile-label {
     font-size: 1.2rem;
 }
@@ -183,7 +177,7 @@ div#preset2 p.profile, div#preset2 p.details,  div#preset2 p.location {
     font-size: 0.9rem;
 }
 
-div#preset2 div.education-details, div#preset2 div.experience, div#preset2 div.projects {
+div#preset2 div.profile-container, div#preset2 div.profile-container, div#preset2 div.education-details, div#preset2 div.experience, div#preset2 div.projects {
     display: grid;
     grid-template-columns: 20% 1fr;
     grid-template-rows: min-content;
@@ -292,12 +286,6 @@ div#preset3 div.personal-details a:first-of-type {
     margin-left: 20%;
 }
 
-div#preset3 div.profile-container {
-    display: grid;
-    margin-top: 0.5em;
-    grid-template-columns: 20% 1fr;
-}
-
 div#preset3 h2.profile-label {
     color: rgb(var(--accent-color));
     font-size: 1.2rem;
@@ -309,7 +297,7 @@ div#preset3 p.profile, div#preset3 p.details,  div#preset3 p.location {
     font-size: 0.9rem;
 }
 
-div#preset3 div.education-details, div#preset3 div.experience, div#preset3 div.projects {
+div#preset3 div.profile-container, div#preset3 div.education-details, div#preset3 div.experience, div#preset3 div.projects {
     display: grid;
     grid-template-columns: 20% 1fr;
     grid-template-rows: min-content;
