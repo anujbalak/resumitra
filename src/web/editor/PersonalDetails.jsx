@@ -161,27 +161,4 @@ function PersonalDetails({resumeData, setResumeData}) {
     )
 }
 
-function AddSocial({socialNameValue, socialLinkValue, socialNameHandler, socialBtnClick}) {
-    if (socialBtnClick) {
-        return (
-        <div className="social-container">
-            <Input 
-                label='Name' 
-                type="text" 
-                inputHandler={socialNameHandler}
-                value={socialNameValue}
-            />
-            <Input 
-                label='Link' 
-                type="url" 
-                inputHandler={socialNameHandler}
-                value={socialLinkValue}
-            />
-        </div>
-
-        )
-    }
-}
-
-
 export default PersonalDetails;

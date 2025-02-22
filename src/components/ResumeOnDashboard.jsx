@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 import threeDotsIcon from "/svg/three-dots.svg";
 import LiveResume from "./LiveResume";

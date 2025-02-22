@@ -1,9 +1,7 @@
-import { useState } from "react"
 import Button from "../../components/Button.jsx"
 import DateInput from "../../components/DateInput.jsx"
 import Input from "../../components/Input.jsx"
 import { format } from "date-fns";
-import { EducationInstitute } from "../../module/resume.mjs"
 
 export default function EducationDetails({resumeData, setResumeData}) {
 
