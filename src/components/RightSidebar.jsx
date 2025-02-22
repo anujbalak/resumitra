@@ -71,7 +71,18 @@ export default function RightSidebar({
                 applyPreset("preset3")
                 removeSelectedClass()
                 e.target.classList.add('selected');       
-                applyAccentOnTexts(currentAccent);
+                applyAccentOnTexts(currentAccent, "preset3");
+                break;
+            case "preset4":
+                applyPreset("preset4")
+                removeSelectedClass()
+                e.target.classList.add('selected');       
+                if(currentAccent === 'ghostWhite') {
+                    setCurrentAccent('dimGray')
+                    applyAccentOnTexts('dimGray', "preset4");
+                    return
+                }
+                applyAccentOnTexts(currentAccent, "preset4");
                 break;
             default:
                 break;
@@ -88,6 +99,13 @@ export default function RightSidebar({
         const textElements = document.querySelectorAll('#preset3 h2')
         if (textElements) {
             textElements.forEach(element => {
+                element.style.color = e.target.id
+            })
+        }
+
+        const t = document.querySelectorAll('#preset4 h2')
+        if (t) {
+            t.forEach(element => {
                 element.style.color = e.target.id
             })
         }
@@ -139,6 +157,11 @@ export default function RightSidebar({
                             id="preset3"
                             clickHandler={clickHandler}
                         />
+                        {/* <Preset
+                            img={preset1Img}
+                            id='preset4'
+                            clickHandler={clickHandler}
+                        /> */}
                     </div>
                     <h3 className="colors-label">Accent Color</h3>
                     <div className="colors">
@@ -225,9 +248,10 @@ function Checkbox({label, checkEventHandler, checked}) {
     )
 }
 
-function applyAccentOnTexts(accentColor) {
-    const textElements = document.querySelectorAll('#preset3 h2')
+function applyAccentOnTexts(accentColor, preset) {
+    const textElements = document.querySelectorAll(`#${preset} h2`)
     textElements.forEach(element => {
         element.style.color = accentColor
     })
+    
 }

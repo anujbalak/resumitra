@@ -30,17 +30,17 @@ export default function LiveResume({
                     {resumeData.personalDetails.linkedin && 
                         <a href={resumeData.personalDetails.linkedin}>Linkedin</a>
                     }
-                    {showProfile &&
-                        <div className="profile-container">
-                            <h2 className="profile-label">
-                                Profile
-                            </h2>
-                            <p className="profile">
-                                {resumeData.personalDetails.profile}
-                            </p>
-                        </div>
-                    }
                 </div>
+                {showProfile &&
+                    <div className="profile-container">
+                        <h2 className="profile-label">
+                            Profile
+                        </h2>
+                        <p className="profile">
+                            {resumeData.personalDetails.profile}
+                        </p>
+                    </div>
+                }
                 {showEducation &&
                 <div className="education-details">
                     <h2 className="education-label">Education</h2>
