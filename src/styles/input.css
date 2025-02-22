@@ -62,6 +62,12 @@ div.date-picker-container {
   display: grid;
   justify-items: start;
 }
+
+.rdp-root div {
+  --rdp-accent-color: white
+
+}
+
 /*
 div.react-date-picker__wrapper {
     padding: 0.2em;

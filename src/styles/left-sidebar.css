@@ -8,6 +8,9 @@ div.right-sidebar {
   height: calc(11.7in - 50px);
   overflow: auto;
 }
+div.right-sidebar {
+  max-width: 350px;
+}
 
 div.enter-details {
   z-index: 1;

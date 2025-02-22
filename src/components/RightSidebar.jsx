@@ -228,10 +228,10 @@ function Checkbox({ label, checkEventHandler, checked }) {
         onChange={checkEventHandler}
         checked={checked}
       />
-      <div className="state p-primary-o p-on">
+      <div className="state p-warning-o p-on">
         <label htmlFor="checkbox">Hide {label}</label>
       </div>
-      <div className="state p-primary-o p-off">
+      <div className="state p-warning-o p-off">
         <label htmlFor="checkbox">Show {label}</label>
       </div>
     </div>
