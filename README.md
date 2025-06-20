@@ -1,5 +1,7 @@
 # Resumitra 📄
 
+**Live at: https://resumitra.pages.dev/**
+
 A modern, feature-rich resume builder inspired by [rxresu.me](https://rxresu.me) that lets you create beautiful, professional resumes with live preview capabilities.
 
 ## 🚀 Features
